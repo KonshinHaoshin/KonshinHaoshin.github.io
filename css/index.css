@@ -4448,6 +4448,37 @@ figure.highlight pre .javascript .function {
   line-height: 1em;
   border-radius: 3px;
 }
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+  width: fit-content;
+}
+.container h1 a:not(.headerlink),
+.container h2 a:not(.headerlink),
+.container h3 a:not(.headerlink),
+.container h4 a:not(.headerlink),
+.container h5 a:not(.headerlink),
+.container h6 a:not(.headerlink) {
+  position: relative;
+  z-index: 10;
+}
+.container h1 a.headerlink,
+.container h2 a.headerlink,
+.container h3 a.headerlink,
+.container h4 a.headerlink,
+.container h5 a.headerlink,
+.container h6 a.headerlink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .container ol ol,
 .container ul ol,
 .container ol ul,
