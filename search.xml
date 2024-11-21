@@ -67,17 +67,6 @@
     
     <entry>
       <title>tags</title>
-      <link href="/tags/index-1.html"/>
-      <url>/tags/index-1.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
       
@@ -93,6 +82,28 @@
       <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index-1.html"/>
+      <url>/tags/index-1.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/live2d_models/live2d/chara/037_general_rip/angry01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/angry01.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.61,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.72},{"id":"PARAM_EYE_L_OPEN","val":0.61,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.51},{"id":"PARAM_BROW_R_Y","val":-0.63},{"id":"PARAM_BROW_R_X","val":-0.23},{"id":"PARAM_BROW_R_ANGLE","val":-0.53},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.1},{"id":"PARAM_BROW_L_X","val":-0.23},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
       
     </entry>
     
@@ -122,17 +133,6 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/angry01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/angry01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.61,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.72},{"id":"PARAM_EYE_L_OPEN","val":0.61,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.51},{"id":"PARAM_BROW_R_Y","val":-0.63},{"id":"PARAM_BROW_R_X","val":-0.23},{"id":"PARAM_BROW_R_ANGLE","val":-0.53},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.1},{"id":"PARAM_BROW_L_X","val":-0.23},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/live2d_models/live2d/chara/037_general_rip/angry03.exp.json"/>
       <url>/live2d_models/live2d/chara/037_general_rip/angry03.exp.json</url>
       
@@ -148,28 +148,6 @@
       <url>/live2d_models/live2d/chara/037_general_rip/angry04.exp.json</url>
       
         <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.45},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.45},{"id":"PARAM_BROW_R_Y","val":-0.14},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.72},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-0.14},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/cry01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/cry01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_TEAR","val":1},{"id":"PARAM_BROW_R_Y","val":-0.35},{"id":"PARAM_BROW_R_X","val":-0.5},{"id":"PARAM_BROW_R_ANGLE","val":0.35},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.35},{"id":"PARAM_BROW_L_X","val":-0.5},{"id":"PARAM_BROW_L_ANGLE","val":0.35},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.5}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/bye01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/bye01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":1},{"id":"PARAM_BROW_R_Y","val":0.36},{"id":"PARAM_BROW_R_ANGLE","val":0.41},{"id":"PARAM_BROW_L_Y","val":0.36},{"id":"PARAM_BROW_L_ANGLE","val":0.41},{"id":"PARAM_MOUTH_FORM_01","val":0.5}]}]]></content>
       
     </entry>
     
@@ -199,6 +177,17 @@
     
     <entry>
       <title></title>
+      <link href="/live2d_models/live2d/chara/037_general_rip/bye01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/bye01.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":1},{"id":"PARAM_BROW_R_Y","val":0.36},{"id":"PARAM_BROW_R_ANGLE","val":0.41},{"id":"PARAM_BROW_L_Y","val":0.36},{"id":"PARAM_BROW_L_ANGLE","val":0.41},{"id":"PARAM_MOUTH_FORM_01","val":0.5}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/live2d_models/live2d/chara/037_general_rip/idle01.exp.json"/>
       <url>/live2d_models/live2d/chara/037_general_rip/idle01.exp.json</url>
       
@@ -210,21 +199,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/kandou01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/kandou01.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/cry01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/cry01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_R","val":1},{"id":"PARAM_EYE_L_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_L","val":1},{"id":"PARAM_EYE_SCALE","val":-0.25},{"id":"PARAM_BROW_R_Y","val":0.44},{"id":"PARAM_BROW_R_X","val":0.1},{"id":"PARAM_BROW_R_ANGLE","val":0.9},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_Y","val":0.44},{"id":"PARAM_BROW_L_X","val":0.1},{"id":"PARAM_BROW_L_ANGLE","val":0.9},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.04},{"id":"PARAM_MOUTH_SCALE","val":-1},{"id":"PARAM_CHEEK","val":0.27},{"id":"PARAM_CHEEK2","val":0.5}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/kandou02.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/kandou02.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.71,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":0.97},{"id":"PARAM_EYELID_R","val":-0.62},{"id":"PARAM_EYE_L_OPEN","val":0.71,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":0.97},{"id":"PARAM_EYELID_L","val":-0.62},{"id":"PARAM_EYE_HIGHLIGHT","val":1},{"id":"PARAM_TEAR","val":1},{"id":"PARAM_BROW_R_Y","val":-0.15},{"id":"PARAM_BROW_R_X","val":-0.69},{"id":"PARAM_BROW_R_ANGLE","val":0.81},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.15},{"id":"PARAM_BROW_L_X","val":-0.65},{"id":"PARAM_BROW_L_ANGLE","val":0.78},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.32},{"id":"PARAM_MOUTH_SCALE","val":1},{"id":"PARAM_CHEEK","val":0.27},{"id":"PARAM_CHEEK2","val":1}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_TEAR","val":1},{"id":"PARAM_BROW_R_Y","val":-0.35},{"id":"PARAM_BROW_R_X","val":-0.5},{"id":"PARAM_BROW_R_ANGLE","val":0.35},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.35},{"id":"PARAM_BROW_L_X","val":-0.5},{"id":"PARAM_BROW_L_ANGLE","val":0.35},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.5}]}]]></content>
       
     </entry>
     
@@ -243,6 +221,17 @@
     
     <entry>
       <title></title>
+      <link href="/live2d_models/live2d/chara/037_general_rip/kandou01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/kandou01.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_R","val":1},{"id":"PARAM_EYE_L_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_L","val":1},{"id":"PARAM_EYE_SCALE","val":-0.25},{"id":"PARAM_BROW_R_Y","val":0.44},{"id":"PARAM_BROW_R_X","val":0.1},{"id":"PARAM_BROW_R_ANGLE","val":0.9},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_Y","val":0.44},{"id":"PARAM_BROW_L_X","val":0.1},{"id":"PARAM_BROW_L_ANGLE","val":0.9},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.04},{"id":"PARAM_MOUTH_SCALE","val":-1},{"id":"PARAM_CHEEK","val":0.27},{"id":"PARAM_CHEEK2","val":0.5}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/live2d_models/live2d/chara/037_general_rip/kime02.exp.json"/>
       <url>/live2d_models/live2d/chara/037_general_rip/kime02.exp.json</url>
       
@@ -254,10 +243,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/sad02.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/sad02.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/kandou02.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/kandou02.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.64,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.31},{"id":"PARAM_EYE_L_OPEN","val":0.64,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.31},{"id":"PARAM_BROW_R_Y","val":-0.02},{"id":"PARAM_BROW_R_ANGLE","val":-0.09},{"id":"PARAM_BROW_R_FORM","val":-0.3},{"id":"PARAM_BROW_L_Y","val":-0.37},{"id":"PARAM_BROW_L_ANGLE","val":-0.09},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.34}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.71,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":0.97},{"id":"PARAM_EYELID_R","val":-0.62},{"id":"PARAM_EYE_L_OPEN","val":0.71,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":0.97},{"id":"PARAM_EYELID_L","val":-0.62},{"id":"PARAM_EYE_HIGHLIGHT","val":1},{"id":"PARAM_TEAR","val":1},{"id":"PARAM_BROW_R_Y","val":-0.15},{"id":"PARAM_BROW_R_X","val":-0.69},{"id":"PARAM_BROW_R_ANGLE","val":0.81},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.15},{"id":"PARAM_BROW_L_X","val":-0.65},{"id":"PARAM_BROW_L_ANGLE","val":0.78},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.32},{"id":"PARAM_MOUTH_SCALE","val":1},{"id":"PARAM_CHEEK","val":0.27},{"id":"PARAM_CHEEK2","val":1}]}]]></content>
       
     </entry>
     
@@ -287,6 +276,17 @@
     
     <entry>
       <title></title>
+      <link href="/live2d_models/live2d/chara/037_general_rip/sad02.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/sad02.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.64,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.31},{"id":"PARAM_EYE_L_OPEN","val":0.64,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.31},{"id":"PARAM_BROW_R_Y","val":-0.02},{"id":"PARAM_BROW_R_ANGLE","val":-0.09},{"id":"PARAM_BROW_R_FORM","val":-0.3},{"id":"PARAM_BROW_L_Y","val":-0.37},{"id":"PARAM_BROW_L_ANGLE","val":-0.09},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.34}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/live2d_models/live2d/chara/037_general_rip/shame01.exp.json"/>
       <url>/live2d_models/live2d/chara/037_general_rip/shame01.exp.json</url>
       
@@ -309,10 +309,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/shame02.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/shame02.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/smile02.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/smile02.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.82},{"id":"PARAM_EYE_L_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.82},{"id":"PARAM_EYE_FORM","val":1},{"id":"PARAM_BROW_R_Y","val":-0.6},{"id":"PARAM_BROW_R_X","val":-0.3},{"id":"PARAM_BROW_R_ANGLE","val":-0.35},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.6},{"id":"PARAM_BROW_L_X","val":-0.3},{"id":"PARAM_BROW_L_ANGLE","val":-0.35},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK","val":0.61},{"id":"PARAM_CHEEK2","val":1}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":1},{"id":"PARAM_BROW_R_Y","val":-0.1},{"id":"PARAM_BROW_R_X","val":0.05},{"id":"PARAM_BROW_R_ANGLE","val":0.7},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_Y","val":-0.1},{"id":"PARAM_BROW_L_X","val":0.05},{"id":"PARAM_BROW_L_ANGLE","val":0.7},{"id":"PARAM_BROW_L_FORM","val":0.5}]}]]></content>
       
     </entry>
     
@@ -320,10 +320,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/smile02.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/smile02.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/shame02.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/shame02.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":1},{"id":"PARAM_BROW_R_Y","val":-0.1},{"id":"PARAM_BROW_R_X","val":0.05},{"id":"PARAM_BROW_R_ANGLE","val":0.7},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_Y","val":-0.1},{"id":"PARAM_BROW_L_X","val":0.05},{"id":"PARAM_BROW_L_ANGLE","val":0.7},{"id":"PARAM_BROW_L_FORM","val":0.5}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.82},{"id":"PARAM_EYE_L_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.82},{"id":"PARAM_EYE_FORM","val":1},{"id":"PARAM_BROW_R_Y","val":-0.6},{"id":"PARAM_BROW_R_X","val":-0.3},{"id":"PARAM_BROW_R_ANGLE","val":-0.35},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.6},{"id":"PARAM_BROW_L_X","val":-0.3},{"id":"PARAM_BROW_L_ANGLE","val":-0.35},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK","val":0.61},{"id":"PARAM_CHEEK2","val":1}]}]]></content>
       
     </entry>
     
@@ -342,10 +342,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/smile03.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/smile03.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/smile04.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/smile04.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_EYE_L_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_BROW_R_Y","val":-0.06},{"id":"PARAM_BROW_R_X","val":-0.26},{"id":"PARAM_BROW_R_ANGLE","val":0.2},{"id":"PARAM_BROW_R_FORM","val":-0.4},{"id":"PARAM_BROW_L_Y","val":0.48},{"id":"PARAM_BROW_L_X","val":-0.05},{"id":"PARAM_BROW_L_ANGLE","val":0.08},{"id":"PARAM_BROW_L_FORM","val":-0.11},{"id":"PARAM_MOUTH_FORM_01","val":0.25}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":1},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_EYE_HIGHLIGHT","val":1},{"id":"PARAM_BROW_R_Y","val":-0.39},{"id":"PARAM_BROW_R_X","val":0.1},{"id":"PARAM_BROW_R_ANGLE","val":0.64},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_Y","val":-0.39},{"id":"PARAM_BROW_L_X","val":0.1},{"id":"PARAM_BROW_L_ANGLE","val":0.64},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.4}]}]]></content>
       
     </entry>
     
@@ -353,10 +353,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/smile04.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/smile04.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/smile03.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/smile03.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":1},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_EYE_HIGHLIGHT","val":1},{"id":"PARAM_BROW_R_Y","val":-0.39},{"id":"PARAM_BROW_R_X","val":0.1},{"id":"PARAM_BROW_R_ANGLE","val":0.64},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_Y","val":-0.39},{"id":"PARAM_BROW_L_X","val":0.1},{"id":"PARAM_BROW_L_ANGLE","val":0.64},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.4}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_EYE_L_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_BROW_R_Y","val":-0.06},{"id":"PARAM_BROW_R_X","val":-0.26},{"id":"PARAM_BROW_R_ANGLE","val":0.2},{"id":"PARAM_BROW_R_FORM","val":-0.4},{"id":"PARAM_BROW_L_Y","val":0.48},{"id":"PARAM_BROW_L_X","val":-0.05},{"id":"PARAM_BROW_L_ANGLE","val":0.08},{"id":"PARAM_BROW_L_FORM","val":-0.11},{"id":"PARAM_MOUTH_FORM_01","val":0.25}]}]]></content>
       
     </entry>
     
@@ -375,10 +375,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/thinking01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/thinking01.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/thinking02.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/thinking02.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_EYE_L_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_BROW_R_Y","val":0.22},{"id":"PARAM_BROW_R_ANGLE","val":0.3},{"id":"PARAM_BROW_R_FORM","val":-0.41},{"id":"PARAM_BROW_L_Y","val":0.23},{"id":"PARAM_BROW_L_ANGLE","val":0.28},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.34}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.85,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.36},{"id":"PARAM_EYE_L_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.36},{"id":"PARAM_BROW_R_Y","val":0.1},{"id":"PARAM_BROW_R_X","val":-0.24},{"id":"PARAM_BROW_R_ANGLE","val":-0.27},{"id":"PARAM_BROW_R_FORM","val":-0.33},{"id":"PARAM_BROW_L_Y","val":-0.38},{"id":"PARAM_BROW_L_X","val":-0.25},{"id":"PARAM_BROW_L_ANGLE","val":0.23},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.48}]}]]></content>
       
     </entry>
     
@@ -386,10 +386,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/thinking02.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/thinking02.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/thinking01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/thinking01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.85,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.36},{"id":"PARAM_EYE_L_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.36},{"id":"PARAM_BROW_R_Y","val":0.1},{"id":"PARAM_BROW_R_X","val":-0.24},{"id":"PARAM_BROW_R_ANGLE","val":-0.27},{"id":"PARAM_BROW_R_FORM","val":-0.33},{"id":"PARAM_BROW_L_Y","val":-0.38},{"id":"PARAM_BROW_L_X","val":-0.25},{"id":"PARAM_BROW_L_ANGLE","val":0.23},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.48}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_EYE_L_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_BROW_R_Y","val":0.22},{"id":"PARAM_BROW_R_ANGLE","val":0.3},{"id":"PARAM_BROW_R_FORM","val":-0.41},{"id":"PARAM_BROW_L_Y","val":0.23},{"id":"PARAM_BROW_L_ANGLE","val":0.28},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.34}]}]]></content>
       
     </entry>
     
@@ -441,10 +441,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry03.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry03.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry04.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry04.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":1.1,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-1},{"id":"PARAM_EYE_L_OPEN","val":1.1,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-1},{"id":"PARAM_EYE_SCALE","val":-1},{"id":"PARAM_BROW_R_Y","val":-0.52},{"id":"PARAM_BROW_R_X","val":-0.39},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.62},{"id":"PARAM_BROW_L_X","val":-0.39},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":0.57}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.45},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.45},{"id":"PARAM_BROW_R_Y","val":-0.14},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.72},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-0.14},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
       
     </entry>
     
@@ -463,21 +463,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry04.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry04.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry03.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry03.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.45},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.45},{"id":"PARAM_BROW_R_Y","val":-0.14},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.72},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-0.14},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_TEAR","val":1},{"id":"PARAM_BROW_R_Y","val":-0.35},{"id":"PARAM_BROW_R_X","val":-0.5},{"id":"PARAM_BROW_R_ANGLE","val":0.35},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.35},{"id":"PARAM_BROW_L_X","val":-0.5},{"id":"PARAM_BROW_L_ANGLE","val":0.35},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.5}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":1.1,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-1},{"id":"PARAM_EYE_L_OPEN","val":1.1,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-1},{"id":"PARAM_EYE_SCALE","val":-1},{"id":"PARAM_BROW_R_Y","val":-0.52},{"id":"PARAM_BROW_R_X","val":-0.39},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.62},{"id":"PARAM_BROW_L_X","val":-0.39},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":0.57}]}]]></content>
       
     </entry>
     
@@ -496,6 +485,17 @@
     
     <entry>
       <title></title>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry01.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_TEAR","val":1},{"id":"PARAM_BROW_R_Y","val":-0.35},{"id":"PARAM_BROW_R_X","val":-0.5},{"id":"PARAM_BROW_R_ANGLE","val":0.35},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.35},{"id":"PARAM_BROW_L_X","val":-0.5},{"id":"PARAM_BROW_L_ANGLE","val":0.35},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.5}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry02.exp.json"/>
       <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry02.exp.json</url>
       
@@ -507,10 +507,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/default.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/default.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/kandou01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/kandou01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_R","val":1},{"id":"PARAM_EYE_L_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_L","val":1},{"id":"PARAM_EYE_SCALE","val":-0.25},{"id":"PARAM_BROW_R_Y","val":0.44},{"id":"PARAM_BROW_R_X","val":0.1},{"id":"PARAM_BROW_R_ANGLE","val":0.9},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_Y","val":0.44},{"id":"PARAM_BROW_L_X","val":0.1},{"id":"PARAM_BROW_L_ANGLE","val":0.9},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.04},{"id":"PARAM_MOUTH_SCALE","val":-1},{"id":"PARAM_CHEEK","val":0.27},{"id":"PARAM_CHEEK2","val":0.5}]}]]></content>
       
     </entry>
     
@@ -529,10 +529,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/kandou01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/kandou01.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/default.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/default.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_R","val":1},{"id":"PARAM_EYE_L_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_L","val":1},{"id":"PARAM_EYE_SCALE","val":-0.25},{"id":"PARAM_BROW_R_Y","val":0.44},{"id":"PARAM_BROW_R_X","val":0.1},{"id":"PARAM_BROW_R_ANGLE","val":0.9},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_Y","val":0.44},{"id":"PARAM_BROW_L_X","val":0.1},{"id":"PARAM_BROW_L_ANGLE","val":0.9},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.04},{"id":"PARAM_MOUTH_SCALE","val":-1},{"id":"PARAM_CHEEK","val":0.27},{"id":"PARAM_CHEEK2","val":0.5}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500}]]></content>
       
     </entry>
     
@@ -628,10 +628,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile01.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/shame02.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/shame02.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_MOUTH_FORM_01","val":0.5}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.82},{"id":"PARAM_EYE_L_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.82},{"id":"PARAM_EYE_FORM","val":1},{"id":"PARAM_BROW_R_Y","val":-0.6},{"id":"PARAM_BROW_R_X","val":-0.3},{"id":"PARAM_BROW_R_ANGLE","val":-0.35},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.6},{"id":"PARAM_BROW_L_X","val":-0.3},{"id":"PARAM_BROW_L_ANGLE","val":-0.35},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK","val":0.61},{"id":"PARAM_CHEEK2","val":1}]}]]></content>
       
     </entry>
     
@@ -650,28 +650,6 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/shame02.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/shame02.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.82},{"id":"PARAM_EYE_L_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.82},{"id":"PARAM_EYE_FORM","val":1},{"id":"PARAM_BROW_R_Y","val":-0.6},{"id":"PARAM_BROW_R_X","val":-0.3},{"id":"PARAM_BROW_R_ANGLE","val":-0.35},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.6},{"id":"PARAM_BROW_L_X","val":-0.3},{"id":"PARAM_BROW_L_ANGLE","val":-0.35},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK","val":0.61},{"id":"PARAM_CHEEK2","val":1}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/surprised01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/surprised01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":1.27,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.39},{"id":"PARAM_EYE_L_OPEN","val":1.27,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.39},{"id":"PARAM_EYE_SCALE","val":-1},{"id":"PARAM_BROW_R_X","val":0.05},{"id":"PARAM_BROW_R_ANGLE","val":0.7},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_X","val":0.05},{"id":"PARAM_BROW_L_ANGLE","val":0.7},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.33}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile03.exp.json"/>
       <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile03.exp.json</url>
       
@@ -683,21 +661,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking02.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking02.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.85,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.36},{"id":"PARAM_EYE_L_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.36},{"id":"PARAM_BROW_R_Y","val":0.1},{"id":"PARAM_BROW_R_X","val":-0.24},{"id":"PARAM_BROW_R_ANGLE","val":-0.27},{"id":"PARAM_BROW_R_FORM","val":-0.33},{"id":"PARAM_BROW_L_Y","val":-0.38},{"id":"PARAM_BROW_L_X","val":-0.25},{"id":"PARAM_BROW_L_ANGLE","val":0.23},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.48}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_EYE_L_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_BROW_R_Y","val":0.22},{"id":"PARAM_BROW_R_ANGLE","val":0.3},{"id":"PARAM_BROW_R_FORM","val":-0.41},{"id":"PARAM_BROW_L_Y","val":0.23},{"id":"PARAM_BROW_L_ANGLE","val":0.28},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.34}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_MOUTH_FORM_01","val":0.5}]}]]></content>
       
     </entry>
     
@@ -716,10 +683,21 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking03.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking03.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/surprised01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/surprised01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.72,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.72,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_BROW_R_Y","val":-0.19},{"id":"PARAM_BROW_R_ANGLE","val":0.11},{"id":"PARAM_BROW_L_Y","val":-0.19},{"id":"PARAM_BROW_L_ANGLE","val":0.11},{"id":"PARAM_MOUTH_FORM_01","val":-0.38},{"id":"PARAM_MOUTH_SCALE","val":-1}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":1.27,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.39},{"id":"PARAM_EYE_L_OPEN","val":1.27,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.39},{"id":"PARAM_EYE_SCALE","val":-1},{"id":"PARAM_BROW_R_X","val":0.05},{"id":"PARAM_BROW_R_ANGLE","val":0.7},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_X","val":0.05},{"id":"PARAM_BROW_L_ANGLE","val":0.7},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.33}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking01.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_EYE_L_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_BROW_R_Y","val":0.22},{"id":"PARAM_BROW_R_ANGLE","val":0.3},{"id":"PARAM_BROW_R_FORM","val":-0.41},{"id":"PARAM_BROW_L_Y","val":0.23},{"id":"PARAM_BROW_L_ANGLE","val":0.28},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.34}]}]]></content>
       
     </entry>
     
@@ -731,6 +709,28 @@
       <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/wink01.exp.json</url>
       
         <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.81,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":0.83},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_BROW_R_Y","val":0.17},{"id":"PARAM_BROW_R_X","val":-0.01},{"id":"PARAM_BROW_R_ANGLE","val":0.62},{"id":"PARAM_BROW_R_FORM","val":0.46},{"id":"PARAM_BROW_L_Y","val":-0.4},{"id":"PARAM_BROW_L_X","val":-0.34},{"id":"PARAM_BROW_L_ANGLE","val":0.66},{"id":"PARAM_BROW_L_FORM","val":-0.19},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.69}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking02.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking02.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.85,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.36},{"id":"PARAM_EYE_L_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.36},{"id":"PARAM_BROW_R_Y","val":0.1},{"id":"PARAM_BROW_R_X","val":-0.24},{"id":"PARAM_BROW_R_ANGLE","val":-0.27},{"id":"PARAM_BROW_R_FORM","val":-0.33},{"id":"PARAM_BROW_L_Y","val":-0.38},{"id":"PARAM_BROW_L_X","val":-0.25},{"id":"PARAM_BROW_L_ANGLE","val":0.23},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.48}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking03.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking03.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.72,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.72,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_BROW_R_Y","val":-0.19},{"id":"PARAM_BROW_R_ANGLE","val":0.11},{"id":"PARAM_BROW_L_Y","val":-0.19},{"id":"PARAM_BROW_L_ANGLE","val":0.11},{"id":"PARAM_MOUTH_FORM_01","val":-0.38},{"id":"PARAM_MOUTH_SCALE","val":-1}]}]]></content>
       
     </entry>
     
