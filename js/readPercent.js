@@ -15,3 +15,29 @@ function percent() {
         up.childNodes[0].style.display = 'block'
     }
 }
+
+// 获取按钮元素
+const goDownButton = document.getElementById('go-down');
+const scrollPercentDisplay = document.querySelector('.scroll-percent');
+
+// 点击按钮滚动到底部
+goDownButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: document.body.scrollHeight, // 滚动到底部
+        behavior: 'smooth' // 平滑滚动
+    });
+});
+
+// 更新滚动百分比
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const windowHeight = document.documentElement.clientHeight;
+    const documentHeight = document.body.scrollHeight;
+
+    const percent = Math.min(
+        Math.round((scrollTop / (documentHeight - windowHeight)) * 100),
+        100
+    );
+
+    scrollPercentDisplay.textContent = `${percent}%`;
+});
