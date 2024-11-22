@@ -192,21 +192,10 @@
     
     <entry>
       <title></title>
-      <link href="/comments/index.html"/>
-      <url>/comments/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/css/custom.css"/>
       <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}]]></content>
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 侧边栏个人信息卡片动态渐变色 */#aside-content > .card-widget.card-info {    background: linear-gradient(            -45deg,            #e8d8b9,            #eccec5,            #a3e9eb,            #bdbdf0,            #eec1ea    );    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@-moz-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}/* 黑夜模式适配 */[data-theme="dark"] #aside-content > .card-widget.card-info {    background: #191919ee;}/* 个人信息Follow me按钮 */#aside-content > .card-widget.card-info > #card-info-btn {    background-color: #3eb8be;    border-radius: 8px;}#owo-big {    position: fixed;    align-items: center;    background-color: rgb(255, 255, 255);    border: 1px #aaa solid;    border-radius: 10px;    z-index: 9999;    display: none;    transform: translate(0, -105%);    overflow: hidden;    animation: owoIn 0.3s cubic-bezier(0.42, 0, 0.3, 1.11);}[data-theme=dark] #owo-big {    background-color: #4a4a4a}#owo-big img {    width: 100%;}/* 动画效果代码由 Heo：https://blog.zhheo.com/ 提供 */@keyframes owoIn {    0% {        transform: translate(0, -95%);        opacity: 0;    }    100% {        transform: translate(0, -105%);        opacity: 1;    }}]]></content>
       
     </entry>
     
@@ -218,6 +207,50 @@
       <url>/css/readPercent.css</url>
       
         <content type="html"><![CDATA[/* 返回顶部 */button#go-up #percent {    display: none;    font-weight: bold;    font-size: 15px !important;}button#go-up span {    font-size: 12px!important;    margin-right: -1px;}/* 鼠标滑动到按钮上时显示返回顶部图标 */button#go-up:hover i {    display: block !important;}button#go-up:hover #percent {    display: none !important;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/universe.css"/>
+      <url>/css/universe.css</url>
+      
+        <content type="html"><![CDATA[/* 背景宇宙星光  */#universe{    display: block;    position: fixed;    margin: 0;    padding: 0;    border: 0;    outline: 0;    left: 0;    top: 0;    width: 100%;    height: 100%;    pointer-events: none;    /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */    z-index: -1;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/comments/index.html"/>
+      <url>/comments/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/emoji.js"/>
+      <url>/js/emoji.js</url>
+      
+        <content type="html"><![CDATA[// 如果当前页有评论就执行函数if (document.getElementById('post-comment')) owoBig();// 表情放大function owoBig() {    let flag = 1, // 设置节流阀        owo_time = '', // 设置计时器        m = 3; // 设置放大倍数    // 创建盒子    let div = document.createElement('div'),        body = document.querySelector('body');    // 设置ID    div.id = 'owo-big';    // 插入盒子    body.appendChild(div)    // 构造observer    let observer = new MutationObserver(mutations => {        for (let i = 0; i < mutations.length; i++) {            let dom = mutations[i].addedNodes,                owo_body = '';            if (dom.length == 2 && dom[1].className == 'OwO-body') owo_body = dom[1];                // 如果需要在评论内容中启用此功能请解除下面的注释            // else if (dom.length == 1 && dom[0].className == 'tk-comment') owo_body = dom[0];            else continue;            // 禁用右键（手机端长按会出现右键菜单，为了体验给禁用掉）            if (document.body.clientWidth <= 768) owo_body.addEventListener('contextmenu', e => e.preventDefault());            // 鼠标移入            owo_body.onmouseover = (e) => {                if (flag && e.target.tagName == 'IMG') {                    flag = 0;                    // 移入300毫秒后显示盒子                    owo_time = setTimeout(() => {                        let height = e.path[0].clientHeight * m, // 盒子高                            width = e.path[0].clientWidth * m, // 盒子宽                            left = (e.x - e.offsetX) - (width - e.path[0].clientWidth) / 2, // 盒子与屏幕左边距离                            top = e.y - e.offsetY; // 盒子与屏幕顶部距离                        if ((left + width) > body.clientWidth) left -= ((left + width) - body.clientWidth + 10); // 右边缘检测，防止超出屏幕                        if (left < 0) left = 10; // 左边缘检测，防止超出屏幕                        // 设置盒子样式                        div.style.cssText = `display:flex; height:${height}px; width:${width}px; left:${left}px; top:${top}px;`;                        // 在盒子中插入图片                        div.innerHTML = `<img src="${e.target.src}">`                    }, 300);                }            };            // 鼠标移出隐藏盒子            owo_body.onmouseout = () => { div.style.display = 'none', flag = 1, clearTimeout(owo_time); }        }    })    observer.observe(document.getElementById('post-comment'), { subtree: true, childList: true }) // 监听的 元素 和 配置项}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/readPercent.js"/>
+      <url>/js/readPercent.js</url>
+      
+        <content type="html"><![CDATA[window.onscroll = percent;// 执行函数// 页面百分比function percent() {    let a = document.documentElement.scrollTop || window.pageYOffset, // 卷去高度        b = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight) - document.documentElement.clientHeight, // 整个网页高度        result = Math.round(a / b * 100), // 计算百分比        up = document.querySelector("#go-up") // 获取按钮    if (result <= 95) {        up.childNodes[0].style.display = 'none'        up.childNodes[1].style.display = 'block'        up.childNodes[1].innerHTML = result;    } else {        up.childNodes[1].style.display = 'none'        up.childNodes[0].style.display = 'block'    }}// 获取按钮元素const goDownButton = document.getElementById('go-down');const scrollPercentDisplay = document.querySelector('.scroll-percent');// 点击按钮滚动到底部goDownButton.addEventListener('click', () => {    window.scrollTo({        top: document.body.scrollHeight, // 滚动到底部        behavior: 'smooth' // 平滑滚动    });});// 更新滚动百分比window.addEventListener('scroll', () => {    const scrollTop = window.scrollY;    const windowHeight = document.documentElement.clientHeight;    const documentHeight = document.body.scrollHeight;    const percent = Math.min(        Math.round((scrollTop / (documentHeight - windowHeight)) * 100),        100    );    scrollPercentDisplay.textContent = `${percent}%`;});]]></content>
       
     </entry>
     
@@ -236,10 +269,10 @@
     
     <entry>
       <title></title>
-      <link href="/js/readPercent.js"/>
-      <url>/js/readPercent.js</url>
+      <link href="/js/universe.js"/>
+      <url>/js/universe.js</url>
       
-        <content type="html"><![CDATA[window.onscroll = percent;// 执行函数// 页面百分比function percent() {    let a = document.documentElement.scrollTop || window.pageYOffset, // 卷去高度        b = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, document.body.offsetHeight, document.documentElement.offsetHeight, document.body.clientHeight, document.documentElement.clientHeight) - document.documentElement.clientHeight, // 整个网页高度        result = Math.round(a / b * 100), // 计算百分比        up = document.querySelector("#go-up") // 获取按钮    if (result <= 95) {        up.childNodes[0].style.display = 'none'        up.childNodes[1].style.display = 'block'        up.childNodes[1].innerHTML = result;    } else {        up.childNodes[1].style.display = 'none'        up.childNodes[0].style.display = 'block'    }}// 获取按钮元素const goDownButton = document.getElementById('go-down');const scrollPercentDisplay = document.querySelector('.scroll-percent');// 点击按钮滚动到底部goDownButton.addEventListener('click', () => {    window.scrollTo({        top: document.body.scrollHeight, // 滚动到底部        behavior: 'smooth' // 平滑滚动    });});// 更新滚动百分比window.addEventListener('scroll', () => {    const scrollTop = window.scrollY;    const windowHeight = document.documentElement.clientHeight;    const documentHeight = document.body.scrollHeight;    const percent = Math.min(        Math.round((scrollTop / (documentHeight - windowHeight)) * 100),        100    );    scrollPercentDisplay.textContent = `${percent}%`;});]]></content>
+        <content type="html"><![CDATA[function dark() {    // 兼容多浏览器的 requestAnimationFrame    window.requestAnimationFrame =        window.requestAnimationFrame ||        window.mozRequestAnimationFrame ||        window.webkitRequestAnimationFrame ||        window.msRequestAnimationFrame;    var n, e, i, h, t = 0.05,        s = document.getElementById("universe"),        o = true,        a = "180,184,240",        r = "226,225,142",        d = "226,225,224",        c = [];    // 初始化画布大小    function f() {        n = window.innerWidth;        e = window.innerHeight;        i = 0.216 * n;        s.setAttribute("width", n);        s.setAttribute("height", e);    }    // 更新画布内容    function u() {        h.clearRect(0, 0, n, e);        for (var t = c.length, i = 0; i < t; i++) {            var star = c[i];            star.move();            star.fadeIn();            star.fadeOut();            star.draw();        }    }    // 星星类    function y() {        this.reset = function () {            this.giant = m(3);            this.comet = !this.giant && !o && m(10);            this.x = l(0, n - 10);            this.y = l(0, e);            this.r = l(1.1, 2.6);            this.dx = l(t, 6 * t) + (this.comet + 1 - 1) * t * l(50, 120) + 2 * t;            this.dy = -l(t, 6 * t) - (this.comet + 1 - 1) * t * l(50, 120);            this.fadingOut = null;            this.fadingIn = true;            this.opacity = 0;            this.opacityTresh = l(0.2, 1 - 0.4 * (this.comet + 1 - 1));            this.do = l(0.0005, 0.002) + 0.001 * (this.comet + 1 - 1);        };        this.fadeIn = function () {            if (this.fadingIn) {                this.fadingIn = !(this.opacity > this.opacityTresh);                this.opacity += this.do;            }        };        this.fadeOut = function () {            if (this.fadingOut) {                this.fadingOut = !(this.opacity < 0);                this.opacity -= this.do / 2;                if (this.x > n || this.y < 0) {                    this.fadingOut = false;                    this.reset();                }            }        };        this.draw = function () {            h.beginPath();            if (this.giant) {                h.fillStyle = "rgba(" + a + "," + this.opacity + ")";                h.arc(this.x, this.y, 2, 0, 2 * Math.PI, false);            } else if (this.comet) {                h.fillStyle = "rgba(" + d + "," + this.opacity + ")";                h.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, false);                for (var t = 0; t < 30; t++) {                    h.fillStyle = "rgba(" + d + "," + (this.opacity - this.opacity / 20 * t) + ")";                    h.rect(this.x - this.dx / 4 * t, this.y - this.dy / 4 * t - 2, 2, 2);                    h.fill();                }            } else {                h.fillStyle = "rgba(" + r + "," + this.opacity + ")";                h.rect(this.x, this.y, this.r, this.r);            }            h.closePath();            h.fill();        };        this.move = function () {            this.x += this.dx;            this.y += this.dy;            if (this.fadingOut === false) {                this.reset();            }            if (this.x > n - n / 4 || this.y < 0) {                this.fadingOut = true;            }        };        setTimeout(function () {            o = false;        }, 50);    }    // 工具函数    function m(t) {        return Math.floor(1000 * Math.random()) + 1 < 10 * t;    }    function l(t, i) {        return Math.random() * (i - t) + t;    }    // 初始化画布和星星    f();    window.addEventListener("resize", f, false);    (function () {        h = s.getContext("2d");        for (var t = 0; t < i; t++) {            c[t] = new y();            c[t].reset();        }        u();    })();    // 动画循环    (function t() {        if (document.getElementsByTagName('html')[0].getAttribute('data-theme') === 'dark') {            u();        }        window.requestAnimationFrame(t);    })();}// 运行动画dark();]]></content>
       
     </entry>
     
@@ -257,9 +290,9 @@
     
     
     <entry>
-      <title></title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index-1.html"/>
+      <url>/tags/index-1.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -268,9 +301,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index-1.html"/>
-      <url>/tags/index-1.html</url>
+      <title></title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -302,32 +335,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/angry01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/angry01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.61,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.72},{"id":"PARAM_EYE_L_OPEN","val":0.61,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.51},{"id":"PARAM_BROW_R_Y","val":-0.63},{"id":"PARAM_BROW_R_X","val":-0.23},{"id":"PARAM_BROW_R_ANGLE","val":-0.53},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.1},{"id":"PARAM_BROW_L_X","val":-0.23},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/live2d_models/live2d/chara/037_general_rip/angry02.exp.json"/>
       <url>/live2d_models/live2d/chara/037_general_rip/angry02.exp.json</url>
       
         <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-1},{"id":"PARAM_EYE_L_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-1},{"id":"PARAM_BROW_R_Y","val":-0.67},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.67},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/angry04.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/angry04.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.45},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.45},{"id":"PARAM_BROW_R_Y","val":-0.14},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.72},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-0.14},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
       
     </entry>
     
@@ -346,10 +357,43 @@
     
     <entry>
       <title></title>
+      <link href="/live2d_models/live2d/chara/037_general_rip/angry01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/angry01.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.61,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.72},{"id":"PARAM_EYE_L_OPEN","val":0.61,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.51},{"id":"PARAM_BROW_R_Y","val":-0.63},{"id":"PARAM_BROW_R_X","val":-0.23},{"id":"PARAM_BROW_R_ANGLE","val":-0.53},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.1},{"id":"PARAM_BROW_L_X","val":-0.23},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/live2d_models/live2d/chara/037_general_rip/bye01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/bye01.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":1},{"id":"PARAM_BROW_R_Y","val":0.36},{"id":"PARAM_BROW_R_ANGLE","val":0.41},{"id":"PARAM_BROW_L_Y","val":0.36},{"id":"PARAM_BROW_L_ANGLE","val":0.41},{"id":"PARAM_MOUTH_FORM_01","val":0.5}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/live2d_models/live2d/chara/037_general_rip/cry01.exp.json"/>
       <url>/live2d_models/live2d/chara/037_general_rip/cry01.exp.json</url>
       
         <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_TEAR","val":1},{"id":"PARAM_BROW_R_Y","val":-0.35},{"id":"PARAM_BROW_R_X","val":-0.5},{"id":"PARAM_BROW_R_ANGLE","val":0.35},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.35},{"id":"PARAM_BROW_L_X","val":-0.5},{"id":"PARAM_BROW_L_ANGLE","val":0.35},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.5}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/live2d_models/live2d/chara/037_general_rip/angry04.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/angry04.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.45},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.45},{"id":"PARAM_BROW_R_Y","val":-0.14},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.72},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-0.14},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
       
     </entry>
     
@@ -372,17 +416,6 @@
       <url>/live2d_models/live2d/chara/037_general_rip/default.exp.json</url>
       
         <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/bye01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/bye01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":1},{"id":"PARAM_BROW_R_Y","val":0.36},{"id":"PARAM_BROW_R_ANGLE","val":0.41},{"id":"PARAM_BROW_L_Y","val":0.36},{"id":"PARAM_BROW_L_ANGLE","val":0.41},{"id":"PARAM_MOUTH_FORM_01","val":0.5}]}]]></content>
       
     </entry>
     
@@ -588,10 +621,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/thinking03.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/thinking03.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/wink01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/wink01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.72,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.72,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_BROW_R_Y","val":-0.19},{"id":"PARAM_BROW_R_ANGLE","val":0.11},{"id":"PARAM_BROW_L_Y","val":-0.19},{"id":"PARAM_BROW_L_ANGLE","val":0.11},{"id":"PARAM_MOUTH_FORM_01","val":-0.38},{"id":"PARAM_MOUTH_SCALE","val":-1}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.81,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":0.83},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_BROW_R_Y","val":0.17},{"id":"PARAM_BROW_R_X","val":-0.01},{"id":"PARAM_BROW_R_ANGLE","val":0.62},{"id":"PARAM_BROW_R_FORM","val":0.46},{"id":"PARAM_BROW_L_Y","val":-0.4},{"id":"PARAM_BROW_L_X","val":-0.34},{"id":"PARAM_BROW_L_ANGLE","val":0.66},{"id":"PARAM_BROW_L_FORM","val":-0.19},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.69}]}]]></content>
       
     </entry>
     
@@ -599,10 +632,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/wink01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/wink01.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/thinking03.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/thinking03.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.81,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":0.83},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_BROW_R_Y","val":0.17},{"id":"PARAM_BROW_R_X","val":-0.01},{"id":"PARAM_BROW_R_ANGLE","val":0.62},{"id":"PARAM_BROW_R_FORM","val":0.46},{"id":"PARAM_BROW_L_Y","val":-0.4},{"id":"PARAM_BROW_L_X","val":-0.34},{"id":"PARAM_BROW_L_ANGLE","val":0.66},{"id":"PARAM_BROW_L_FORM","val":-0.19},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.69}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.72,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.72,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_BROW_R_Y","val":-0.19},{"id":"PARAM_BROW_R_ANGLE","val":0.11},{"id":"PARAM_BROW_L_Y","val":-0.19},{"id":"PARAM_BROW_L_ANGLE","val":0.11},{"id":"PARAM_MOUTH_FORM_01","val":-0.38},{"id":"PARAM_MOUTH_SCALE","val":-1}]}]]></content>
       
     </entry>
     
@@ -632,6 +665,17 @@
     
     <entry>
       <title></title>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry02.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry02.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-1},{"id":"PARAM_EYE_L_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-1},{"id":"PARAM_BROW_R_Y","val":-0.67},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.67},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry03.exp.json"/>
       <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry03.exp.json</url>
       
@@ -654,10 +698,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry02.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry02.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-1},{"id":"PARAM_EYE_L_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-1},{"id":"PARAM_BROW_R_Y","val":-0.67},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.67},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_TEAR","val":1},{"id":"PARAM_BROW_R_Y","val":-0.35},{"id":"PARAM_BROW_R_X","val":-0.5},{"id":"PARAM_BROW_R_ANGLE","val":0.35},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.35},{"id":"PARAM_BROW_L_X","val":-0.5},{"id":"PARAM_BROW_L_ANGLE","val":0.35},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.5}]}]]></content>
       
     </entry>
     
@@ -669,17 +713,6 @@
       <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry04.exp.json</url>
       
         <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.45},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.45},{"id":"PARAM_BROW_R_Y","val":-0.14},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.72},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-0.14},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_TEAR","val":1},{"id":"PARAM_BROW_R_Y","val":-0.35},{"id":"PARAM_BROW_R_X","val":-0.5},{"id":"PARAM_BROW_R_ANGLE","val":0.35},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.35},{"id":"PARAM_BROW_L_X","val":-0.5},{"id":"PARAM_BROW_L_ANGLE","val":0.35},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.5}]}]]></content>
       
     </entry>
     
@@ -786,17 +819,6 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/serious01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/serious01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.8,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.35},{"id":"PARAM_EYE_L_OPEN","val":0.8,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.35},{"id":"PARAM_BROW_R_Y","val":-0.16},{"id":"PARAM_BROW_R_X","val":-0.16},{"id":"PARAM_BROW_R_ANGLE","val":-0.57},{"id":"PARAM_BROW_R_FORM","val":-0.66},{"id":"PARAM_BROW_L_Y","val":-0.16},{"id":"PARAM_BROW_L_X","val":-0.16},{"id":"PARAM_BROW_L_ANGLE","val":-0.57},{"id":"PARAM_BROW_L_FORM","val":-0.66},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.5}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/serious02.exp.json"/>
       <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/serious02.exp.json</url>
       
@@ -819,10 +841,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/shame02.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/shame02.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/serious01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/serious01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.82},{"id":"PARAM_EYE_L_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.82},{"id":"PARAM_EYE_FORM","val":1},{"id":"PARAM_BROW_R_Y","val":-0.6},{"id":"PARAM_BROW_R_X","val":-0.3},{"id":"PARAM_BROW_R_ANGLE","val":-0.35},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.6},{"id":"PARAM_BROW_L_X","val":-0.3},{"id":"PARAM_BROW_L_ANGLE","val":-0.35},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK","val":0.61},{"id":"PARAM_CHEEK2","val":1}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.8,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.35},{"id":"PARAM_EYE_L_OPEN","val":0.8,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.35},{"id":"PARAM_BROW_R_Y","val":-0.16},{"id":"PARAM_BROW_R_X","val":-0.16},{"id":"PARAM_BROW_R_ANGLE","val":-0.57},{"id":"PARAM_BROW_R_FORM","val":-0.66},{"id":"PARAM_BROW_L_Y","val":-0.16},{"id":"PARAM_BROW_L_X","val":-0.16},{"id":"PARAM_BROW_L_ANGLE","val":-0.57},{"id":"PARAM_BROW_L_FORM","val":-0.66},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.5}]}]]></content>
       
     </entry>
     
@@ -830,10 +852,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile01.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/shame02.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/shame02.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_MOUTH_FORM_01","val":0.5}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.82},{"id":"PARAM_EYE_L_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.82},{"id":"PARAM_EYE_FORM","val":1},{"id":"PARAM_BROW_R_Y","val":-0.6},{"id":"PARAM_BROW_R_X","val":-0.3},{"id":"PARAM_BROW_R_ANGLE","val":-0.35},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.6},{"id":"PARAM_BROW_L_X","val":-0.3},{"id":"PARAM_BROW_L_ANGLE","val":-0.35},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK","val":0.61},{"id":"PARAM_CHEEK2","val":1}]}]]></content>
       
     </entry>
     
@@ -852,10 +874,21 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile03.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile03.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_EYE_L_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_BROW_R_Y","val":-0.06},{"id":"PARAM_BROW_R_X","val":-0.26},{"id":"PARAM_BROW_R_ANGLE","val":0.2},{"id":"PARAM_BROW_R_FORM","val":-0.4},{"id":"PARAM_BROW_L_Y","val":0.48},{"id":"PARAM_BROW_L_X","val":-0.05},{"id":"PARAM_BROW_L_ANGLE","val":0.08},{"id":"PARAM_BROW_L_FORM","val":-0.11},{"id":"PARAM_MOUTH_FORM_01","val":0.25}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_MOUTH_FORM_01","val":0.5}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/surprised01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/surprised01.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":1.27,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.39},{"id":"PARAM_EYE_L_OPEN","val":1.27,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.39},{"id":"PARAM_EYE_SCALE","val":-1},{"id":"PARAM_BROW_R_X","val":0.05},{"id":"PARAM_BROW_R_ANGLE","val":0.7},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_X","val":0.05},{"id":"PARAM_BROW_L_ANGLE","val":0.7},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.33}]}]]></content>
       
     </entry>
     
@@ -874,10 +907,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/surprised01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/surprised01.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile03.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/smile03.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":1.27,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.39},{"id":"PARAM_EYE_L_OPEN","val":1.27,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.39},{"id":"PARAM_EYE_SCALE","val":-1},{"id":"PARAM_BROW_R_X","val":0.05},{"id":"PARAM_BROW_R_ANGLE","val":0.7},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_X","val":0.05},{"id":"PARAM_BROW_L_ANGLE","val":0.7},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.33}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_EYE_L_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_BROW_R_Y","val":-0.06},{"id":"PARAM_BROW_R_X","val":-0.26},{"id":"PARAM_BROW_R_ANGLE","val":0.2},{"id":"PARAM_BROW_R_FORM","val":-0.4},{"id":"PARAM_BROW_L_Y","val":0.48},{"id":"PARAM_BROW_L_X","val":-0.05},{"id":"PARAM_BROW_L_ANGLE","val":0.08},{"id":"PARAM_BROW_L_FORM","val":-0.11},{"id":"PARAM_MOUTH_FORM_01","val":0.25}]}]]></content>
       
     </entry>
     
@@ -907,10 +940,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking03.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking03.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/wink01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/wink01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.72,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.72,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_BROW_R_Y","val":-0.19},{"id":"PARAM_BROW_R_ANGLE","val":0.11},{"id":"PARAM_BROW_L_Y","val":-0.19},{"id":"PARAM_BROW_L_ANGLE","val":0.11},{"id":"PARAM_MOUTH_FORM_01","val":-0.38},{"id":"PARAM_MOUTH_SCALE","val":-1}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.81,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":0.83},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_BROW_R_Y","val":0.17},{"id":"PARAM_BROW_R_X","val":-0.01},{"id":"PARAM_BROW_R_ANGLE","val":0.62},{"id":"PARAM_BROW_R_FORM","val":0.46},{"id":"PARAM_BROW_L_Y","val":-0.4},{"id":"PARAM_BROW_L_X","val":-0.34},{"id":"PARAM_BROW_L_ANGLE","val":0.66},{"id":"PARAM_BROW_L_FORM","val":-0.19},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.69}]}]]></content>
       
     </entry>
     
@@ -918,10 +951,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/wink01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/wink01.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking03.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking03.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.81,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":0.83},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_BROW_R_Y","val":0.17},{"id":"PARAM_BROW_R_X","val":-0.01},{"id":"PARAM_BROW_R_ANGLE","val":0.62},{"id":"PARAM_BROW_R_FORM","val":0.46},{"id":"PARAM_BROW_L_Y","val":-0.4},{"id":"PARAM_BROW_L_X","val":-0.34},{"id":"PARAM_BROW_L_ANGLE","val":0.66},{"id":"PARAM_BROW_L_FORM","val":-0.19},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.69}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.72,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.34},{"id":"PARAM_EYE_L_OPEN","val":0.72,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.34},{"id":"PARAM_BROW_R_Y","val":-0.19},{"id":"PARAM_BROW_R_ANGLE","val":0.11},{"id":"PARAM_BROW_L_Y","val":-0.19},{"id":"PARAM_BROW_L_ANGLE","val":0.11},{"id":"PARAM_MOUTH_FORM_01","val":-0.38},{"id":"PARAM_MOUTH_SCALE","val":-1}]}]]></content>
       
     </entry>
     
