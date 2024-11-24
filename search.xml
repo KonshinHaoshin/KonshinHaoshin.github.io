@@ -701,28 +701,6 @@
     
     <entry>
       <title></title>
-      <link href="/css/custom.css"/>
-      <url>/css/custom.css</url>
-      
-        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 侧边栏个人信息卡片动态渐变色 */#aside-content > .card-widget.card-info {    background: linear-gradient(            -45deg,            #e8d8b9,            #eccec5,            #a3e9eb,            #bdbdf0,            #eec1ea    );    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@-moz-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}/* 黑夜模式适配 */[data-theme="dark"] #aside-content > .card-widget.card-info {    background: #191919ee;}/* 个人信息Follow me按钮 */#aside-content > .card-widget.card-info > #card-info-btn {    background-color: #3eb8be;    border-radius: 8px;}#owo-big {    position: fixed;    align-items: center;    background-color: rgb(255, 255, 255);    border: 1px #aaa solid;    border-radius: 10px;    z-index: 9999;    display: none;    transform: translate(0, -105%);    overflow: hidden;    animation: owoIn 0.3s cubic-bezier(0.42, 0, 0.3, 1.11);}[data-theme=dark] #owo-big {    background-color: #4a4a4a}#owo-big img {    width: 100%;}/* 动画效果代码由 Heo：https://blog.zhheo.com/ 提供 */@keyframes owoIn {    0% {        transform: translate(0, -95%);        opacity: 0;    }    100% {        transform: translate(0, -105%);        opacity: 1;    }}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/universe.css"/>
-      <url>/css/universe.css</url>
-      
-        <content type="html"><![CDATA[/* 背景宇宙星光  */#universe{    display: block;    position: fixed;    margin: 0;    padding: 0;    border: 0;    outline: 0;    left: 0;    top: 0;    width: 100%;    height: 100%;    pointer-events: none;    /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */    z-index: -1;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/css/readPercent.css"/>
       <url>/css/readPercent.css</url>
       
@@ -733,22 +711,11 @@
     
     
     <entry>
-      <title>link</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
-      <link href="/js/universe.js"/>
-      <url>/js/universe.js</url>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[function dark() {    // 兼容多浏览器的 requestAnimationFrame    window.requestAnimationFrame =        window.requestAnimationFrame ||        window.mozRequestAnimationFrame ||        window.webkitRequestAnimationFrame ||        window.msRequestAnimationFrame;    var n, e, i, h, t = 0.05,        s = document.getElementById("universe"),        o = true,        a = "180,184,240",        r = "226,225,142",        d = "226,225,224",        c = [];    // 初始化画布大小    function f() {        n = window.innerWidth;        e = window.innerHeight;        i = 0.216 * n;        s.setAttribute("width", n);        s.setAttribute("height", e);    }    // 更新画布内容    function u() {        h.clearRect(0, 0, n, e);        for (var t = c.length, i = 0; i < t; i++) {            var star = c[i];            star.move();            star.fadeIn();            star.fadeOut();            star.draw();        }    }    // 星星类    function y() {        this.reset = function () {            this.giant = m(3);            this.comet = !this.giant && !o && m(10);            this.x = l(0, n - 10);            this.y = l(0, e);            this.r = l(1.1, 2.6);            this.dx = l(t, 6 * t) + (this.comet + 1 - 1) * t * l(50, 120) + 2 * t;            this.dy = -l(t, 6 * t) - (this.comet + 1 - 1) * t * l(50, 120);            this.fadingOut = null;            this.fadingIn = true;            this.opacity = 0;            this.opacityTresh = l(0.2, 1 - 0.4 * (this.comet + 1 - 1));            this.do = l(0.0005, 0.002) + 0.001 * (this.comet + 1 - 1);        };        this.fadeIn = function () {            if (this.fadingIn) {                this.fadingIn = !(this.opacity > this.opacityTresh);                this.opacity += this.do;            }        };        this.fadeOut = function () {            if (this.fadingOut) {                this.fadingOut = !(this.opacity < 0);                this.opacity -= this.do / 2;                if (this.x > n || this.y < 0) {                    this.fadingOut = false;                    this.reset();                }            }        };        this.draw = function () {            h.beginPath();            if (this.giant) {                h.fillStyle = "rgba(" + a + "," + this.opacity + ")";                h.arc(this.x, this.y, 2, 0, 2 * Math.PI, false);            } else if (this.comet) {                h.fillStyle = "rgba(" + d + "," + this.opacity + ")";                h.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, false);                for (var t = 0; t < 30; t++) {                    h.fillStyle = "rgba(" + d + "," + (this.opacity - this.opacity / 20 * t) + ")";                    h.rect(this.x - this.dx / 4 * t, this.y - this.dy / 4 * t - 2, 2, 2);                    h.fill();                }            } else {                h.fillStyle = "rgba(" + r + "," + this.opacity + ")";                h.rect(this.x, this.y, this.r, this.r);            }            h.closePath();            h.fill();        };        this.move = function () {            this.x += this.dx;            this.y += this.dy;            if (this.fadingOut === false) {                this.reset();            }            if (this.x > n - n / 4 || this.y < 0) {                this.fadingOut = true;            }        };        setTimeout(function () {            o = false;        }, 50);    }    // 工具函数    function m(t) {        return Math.floor(1000 * Math.random()) + 1 < 10 * t;    }    function l(t, i) {        return Math.random() * (i - t) + t;    }    // 初始化画布和星星    f();    window.addEventListener("resize", f, false);    (function () {        h = s.getContext("2d");        for (var t = 0; t < i; t++) {            c[t] = new y();            c[t].reset();        }        u();    })();    // 动画循环    (function t() {        if (document.getElementsByTagName('html')[0].getAttribute('data-theme') === 'dark') {            u();        }        window.requestAnimationFrame(t);    })();}// 运行动画dark();]]></content>
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;}#page-header {    background: transparent !important;}/* 白天模式遮罩透明 */#footer::before {    background: transparent !important;}#page-header::before {    background: transparent !important;}/* 夜间模式遮罩透明 */[data-theme="dark"] #footer::before {    background: transparent !important;}[data-theme="dark"] #page-header::before {    background: transparent !important;}/* 侧边栏个人信息卡片动态渐变色 */#aside-content > .card-widget.card-info {    background: linear-gradient(            -45deg,            #e8d8b9,            #eccec5,            #a3e9eb,            #bdbdf0,            #eec1ea    );    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;}@-webkit-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@-moz-keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}@keyframes Gradient {    0% {        background-position: 0% 50%;    }    50% {        background-position: 100% 50%;    }    100% {        background-position: 0% 50%;    }}/* 黑夜模式适配 */[data-theme="dark"] #aside-content > .card-widget.card-info {    background: #191919ee;}/* 个人信息Follow me按钮 */#aside-content > .card-widget.card-info > #card-info-btn {    background-color: #3eb8be;    border-radius: 8px;}#owo-big {    position: fixed;    align-items: center;    background-color: rgb(255, 255, 255);    border: 1px #aaa solid;    border-radius: 10px;    z-index: 9999;    display: none;    transform: translate(0, -105%);    overflow: hidden;    animation: owoIn 0.3s cubic-bezier(0.42, 0, 0.3, 1.11);}[data-theme=dark] #owo-big {    background-color: #4a4a4a}#owo-big img {    width: 100%;}/* 动画效果代码由 Heo：https://blog.zhheo.com/ 提供 */@keyframes owoIn {    0% {        transform: translate(0, -95%);        opacity: 0;    }    100% {        transform: translate(0, -105%);        opacity: 1;    }}]]></content>
       
     </entry>
     
@@ -778,10 +745,54 @@
     
     <entry>
       <title></title>
+      <link href="/css/universe.css"/>
+      <url>/css/universe.css</url>
+      
+        <content type="html"><![CDATA[/* 背景宇宙星光  */#universe{    display: block;    position: fixed;    margin: 0;    padding: 0;    border: 0;    outline: 0;    left: 0;    top: 0;    width: 100%;    height: 100%;    pointer-events: none;    /* 这个是调置顶的优先级的，-1在文章页下面，背景上面，个人推荐这种 */    z-index: -1;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/js/universe.js"/>
+      <url>/js/universe.js</url>
+      
+        <content type="html"><![CDATA[function dark() {    // 兼容多浏览器的 requestAnimationFrame    window.requestAnimationFrame =        window.requestAnimationFrame ||        window.mozRequestAnimationFrame ||        window.webkitRequestAnimationFrame ||        window.msRequestAnimationFrame;    var n, e, i, h, t = 0.05,        s = document.getElementById("universe"),        o = true,        a = "180,184,240",        r = "226,225,142",        d = "226,225,224",        c = [];    // 初始化画布大小    function f() {        n = window.innerWidth;        e = window.innerHeight;        i = 0.216 * n;        s.setAttribute("width", n);        s.setAttribute("height", e);    }    // 更新画布内容    function u() {        h.clearRect(0, 0, n, e);        for (var t = c.length, i = 0; i < t; i++) {            var star = c[i];            star.move();            star.fadeIn();            star.fadeOut();            star.draw();        }    }    // 星星类    function y() {        this.reset = function () {            this.giant = m(3);            this.comet = !this.giant && !o && m(10);            this.x = l(0, n - 10);            this.y = l(0, e);            this.r = l(1.1, 2.6);            this.dx = l(t, 6 * t) + (this.comet + 1 - 1) * t * l(50, 120) + 2 * t;            this.dy = -l(t, 6 * t) - (this.comet + 1 - 1) * t * l(50, 120);            this.fadingOut = null;            this.fadingIn = true;            this.opacity = 0;            this.opacityTresh = l(0.2, 1 - 0.4 * (this.comet + 1 - 1));            this.do = l(0.0005, 0.002) + 0.001 * (this.comet + 1 - 1);        };        this.fadeIn = function () {            if (this.fadingIn) {                this.fadingIn = !(this.opacity > this.opacityTresh);                this.opacity += this.do;            }        };        this.fadeOut = function () {            if (this.fadingOut) {                this.fadingOut = !(this.opacity < 0);                this.opacity -= this.do / 2;                if (this.x > n || this.y < 0) {                    this.fadingOut = false;                    this.reset();                }            }        };        this.draw = function () {            h.beginPath();            if (this.giant) {                h.fillStyle = "rgba(" + a + "," + this.opacity + ")";                h.arc(this.x, this.y, 2, 0, 2 * Math.PI, false);            } else if (this.comet) {                h.fillStyle = "rgba(" + d + "," + this.opacity + ")";                h.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, false);                for (var t = 0; t < 30; t++) {                    h.fillStyle = "rgba(" + d + "," + (this.opacity - this.opacity / 20 * t) + ")";                    h.rect(this.x - this.dx / 4 * t, this.y - this.dy / 4 * t - 2, 2, 2);                    h.fill();                }            } else {                h.fillStyle = "rgba(" + r + "," + this.opacity + ")";                h.rect(this.x, this.y, this.r, this.r);            }            h.closePath();            h.fill();        };        this.move = function () {            this.x += this.dx;            this.y += this.dy;            if (this.fadingOut === false) {                this.reset();            }            if (this.x > n - n / 4 || this.y < 0) {                this.fadingOut = true;            }        };        setTimeout(function () {            o = false;        }, 50);    }    // 工具函数    function m(t) {        return Math.floor(1000 * Math.random()) + 1 < 10 * t;    }    function l(t, i) {        return Math.random() * (i - t) + t;    }    // 初始化画布和星星    f();    window.addEventListener("resize", f, false);    (function () {        h = s.getContext("2d");        for (var t = 0; t < i; t++) {            c[t] = new y();            c[t].reset();        }        u();    })();    // 动画循环    (function t() {        if (document.getElementsByTagName('html')[0].getAttribute('data-theme') === 'dark') {            u();        }        window.requestAnimationFrame(t);    })();}// 运行动画dark();]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>link</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/live2d_models/model.json"/>
       <url>/live2d_models/model.json</url>
       
         <content type="html"><![CDATA[{"version":"Sample 1.0.0","layout":{"center_x":0,"center_y":0,"width":2},"hit_areas_custom":{"head_x":[-0.25,1],"head_y":[0.25,0.2],"body_x":[-0.3,0.2],"body_y":[0.3,-1.9]},"model":"live2d/chara/037_live_event_253_ur_rip/anon_event253.moc","physics":"live2d/chara/037_live_event_253_ur_rip/anon_event253.physics.json","textures":["live2d/chara/037_live_event_253_ur_rip/texture_00.png","live2d/chara/037_live_event_253_ur_rip/texture_01.png"],"motions":{"nnf_right01":[{"file":"live2d/chara/037_live_event_253_ur_rip/nnf_right01.mtn"}],"nf_left01":[{"file":"live2d/chara/037_live_event_253_ur_rip/nf_left01.mtn"}],"idle01":[{"file":"live2d/chara/037_live_event_253_ur_rip/idle01.mtn"}],"nf04":[{"file":"live2d/chara/037_live_event_253_ur_rip/nf04.mtn"}],"kandou01":[{"file":"live2d/chara/037_live_event_253_ur_rip/kandou01.mtn"}],"thinking01":[{"file":"live2d/chara/037_live_event_253_ur_rip/thinking01.mtn"}],"cry02":[{"file":"live2d/chara/037_live_event_253_ur_rip/cry02.mtn"}],"cry01":[{"file":"live2d/chara/037_live_event_253_ur_rip/cry01.mtn"}],"serious01":[{"file":"live2d/chara/037_live_event_253_ur_rip/serious01.mtn"}],"kime02":[{"file":"live2d/chara/037_live_event_253_ur_rip/kime02.mtn"}],"nf01":[{"file":"live2d/chara/037_live_event_253_ur_rip/nf01.mtn"}],"surprised01":[{"file":"live2d/chara/037_live_event_253_ur_rip/surprised01.mtn"}],"thinking02":[{"file":"live2d/chara/037_live_event_253_ur_rip/thinking02.mtn"}],"smile01":[{"file":"live2d/chara/037_live_event_253_ur_rip/smile01.mtn"}],"sad02":[{"file":"live2d/chara/037_live_event_253_ur_rip/sad02.mtn"}],"shame02":[{"file":"live2d/chara/037_live_event_253_ur_rip/shame02.mtn"}],"sad01":[{"file":"live2d/chara/037_live_event_253_ur_rip/sad01.mtn"}],"thinking03":[{"file":"live2d/chara/037_live_event_253_ur_rip/thinking03.mtn"}],"nf05":[{"file":"live2d/chara/037_live_event_253_ur_rip/nf05.mtn"}],"wink01":[{"file":"live2d/chara/037_live_event_253_ur_rip/wink01.mtn"}],"angry02":[{"file":"live2d/chara/037_live_event_253_ur_rip/angry02.mtn"}],"nnf05":[{"file":"live2d/chara/037_live_event_253_ur_rip/nnf05.mtn"}],"nnf04":[{"file":"live2d/chara/037_live_event_253_ur_rip/nnf04.mtn"}],"nnf03":[{"file":"live2d/chara/037_live_event_253_ur_rip/nnf03.mtn"}],"shame01":[{"file":"live2d/chara/037_live_event_253_ur_rip/shame01.mtn"}],"angry03":[{"file":"live2d/chara/037_live_event_253_ur_rip/angry03.mtn"}],"angry04":[{"file":"live2d/chara/037_live_event_253_ur_rip/angry04.mtn"}],"serious02":[{"file":"live2d/chara/037_live_event_253_ur_rip/serious02.mtn"}],"nnf02":[{"file":"live2d/chara/037_live_event_253_ur_rip/nnf02.mtn"}],"nf03":[{"file":"live2d/chara/037_live_event_253_ur_rip/nf03.mtn"}],"kandou02":[{"file":"live2d/chara/037_live_event_253_ur_rip/kandou02.mtn"}],"gacha01":[{"file":"live2d/chara/037_live_event_253_ur_rip/gacha01.mtn"}],"smile01_ingameV2":[{"file":"live2d/chara/037_live_event_253_ur_rip/smile01_ingameV2.mtn"}],"kime01":[{"file":"live2d/chara/037_live_event_253_ur_rip/kime01.mtn"}],"smile04":[{"file":"live2d/chara/037_live_event_253_ur_rip/smile04.mtn"}],"nf_right01":[{"file":"live2d/chara/037_live_event_253_ur_rip/nf_right01.mtn"}],"bye01":[{"file":"live2d/chara/037_live_event_253_ur_rip/bye01.mtn"}],"nnf01":[{"file":"live2d/chara/037_live_event_253_ur_rip/nnf01.mtn"}],"nf02":[{"file":"live2d/chara/037_live_event_253_ur_rip/nf02.mtn"}],"nnf_left01":[{"file":"live2d/chara/037_live_event_253_ur_rip/nnf_left01.mtn"}],"angry01":[{"file":"live2d/chara/037_live_event_253_ur_rip/angry01.mtn"}],"smile02":[{"file":"live2d/chara/037_live_event_253_ur_rip/smile02.mtn"}],"smile03":[{"file":"live2d/chara/037_live_event_253_ur_rip/smile03.mtn"}]},"expressions":[{"name":"angry01","file":"live2d/chara/037_general_rip/angry01.exp.json"},{"name":"angry04","file":"live2d/chara/037_general_rip/angry04.exp.json"},{"name":"cry01","file":"live2d/chara/037_general_rip/cry01.exp.json"},{"name":"kandou01","file":"live2d/chara/037_general_rip/kandou01.exp.json"},{"name":"shame02","file":"live2d/chara/037_general_rip/shame02.exp.json"},{"name":"sad02","file":"live2d/chara/037_general_rip/sad02.exp.json"},{"name":"angry02","file":"live2d/chara/037_general_rip/angry02.exp.json"},{"name":"shame01","file":"live2d/chara/037_general_rip/shame01.exp.json"},{"name":"smile01","file":"live2d/chara/037_general_rip/smile01.exp.json"},{"name":"serious01","file":"live2d/chara/037_general_rip/serious01.exp.json"},{"name":"surprised01","file":"live2d/chara/037_general_rip/surprised01.exp.json"},{"name":"kime02","file":"live2d/chara/037_general_rip/kime02.exp.json"},{"name":"default","file":"live2d/chara/037_general_rip/default.exp.json"},{"name":"idle01","file":"live2d/chara/037_general_rip/idle01.exp.json"},{"name":"kime01","file":"live2d/chara/037_general_rip/kime01.exp.json"},{"name":"thinking03","file":"live2d/chara/037_general_rip/thinking03.exp.json"},{"name":"cry02","file":"live2d/chara/037_general_rip/cry02.exp.json"},{"name":"smile02","file":"live2d/chara/037_general_rip/smile02.exp.json"},{"name":"angry03","file":"live2d/chara/037_general_rip/angry03.exp.json"},{"name":"serious02","file":"live2d/chara/037_general_rip/serious02.exp.json"},{"name":"wink01","file":"live2d/chara/037_general_rip/wink01.exp.json"},{"name":"kandou02","file":"live2d/chara/037_general_rip/kandou02.exp.json"},{"name":"smile03","file":"live2d/chara/037_general_rip/smile03.exp.json"},{"name":"thinking02","file":"live2d/chara/037_general_rip/thinking02.exp.json"},{"name":"bye01","file":"live2d/chara/037_general_rip/bye01.exp.json"},{"name":"smile04","file":"live2d/chara/037_general_rip/smile04.exp.json"},{"name":"sad01","file":"live2d/chara/037_general_rip/sad01.exp.json"},{"name":"thinking01","file":"live2d/chara/037_general_rip/thinking01.exp.json"}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -822,10 +833,10 @@
     
     <entry>
       <title></title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/angry02.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/angry02.exp.json</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-1},{"id":"PARAM_EYE_L_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-1},{"id":"PARAM_BROW_R_Y","val":-0.67},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.67},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
       
     </entry>
     
@@ -833,10 +844,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/angry04.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/angry04.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_live_event_253_ur_rip/anon_event253.physics.json"/>
+      <url>/live2d_models/live2d/chara/037_live_event_253_ur_rip/anon_event253.physics.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.45},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.45},{"id":"PARAM_BROW_R_Y","val":-0.14},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.72},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-0.14},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"clothes_a","setup":{"length":0.13,"regist":0.55,"mass":0.12},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_A","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_b","setup":{"length":0.17,"regist":0.6,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_B","ptype":"angle","scale":0.018,"weight":1}]},{"label":"clothes_c","setup":{"length":0.17,"regist":0.45,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_C","ptype":"angle","scale":0.018,"weight":1}]},{"label":"clothes_d","setup":{"length":0.16,"regist":0.56,"mass":0.14},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_D","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_e","setup":{"length":0.18,"regist":0.56,"mass":0.2},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_E","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_f","setup":{"length":0.12,"regist":0.56,"mass":0.13},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_F","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_g","setup":{"length":0.15,"regist":0.55,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_G","ptype":"angle","scale":0.015,"weight":1}]},{"label":"clothes_h","setup":{"length":0.15,"regist":0.55,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_H","ptype":"angle","scale":0.015,"weight":1}]},{"label":"clothes_i","setup":{"length":0.12,"regist":0.54,"mass":0.13},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_I","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_j","setup":{"length":0.2,"regist":0.53,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_J","ptype":"angle","scale":0.017,"weight":1}]},{"label":"clothes_k","setup":{"length":0.23,"regist":0.6,"mass":0.2},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_K","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_l","setup":{"length":0.12,"regist":0.55,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_L","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_m","setup":{"length":0.2,"regist":0.58,"mass":0.24},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_M","ptype":"angle","scale":0.027,"weight":1}]},{"label":"clothes_n","setup":{"length":0.15,"regist":0.5,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_N","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_o","setup":{"length":0.14,"regist":0.58,"mass":0.12},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_O","ptype":"angle","scale":0.028,"weight":1}]},{"label":"clothes_p","setup":{"length":0.15,"regist":0.58,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_P","ptype":"angle","scale":0.021,"weight":1}]},{"label":"clothes_q","setup":{"length":0.19,"regist":0.58,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_Q","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_r","setup":{"length":0.15,"regist":0.58,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_R","ptype":"angle","scale":0.023,"weight":1}]},{"label":"clothes_s","setup":{"length":0.18,"regist":0.55,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_S","ptype":"angle","scale":0.028,"weight":1}]},{"label":"clothes_t","setup":{"length":0.18,"regist":0.6,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_T","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_u","setup":{"length":0.21,"regist":0.58,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_U","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_v","setup":{"length":0.15,"regist":0.52,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_V","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_w","setup":{"length":0.19,"regist":0.58,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_W","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_x","setup":{"length":0.23,"regist":0.55,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_X","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_y","setup":{"length":0.25,"regist":0.57,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_Y","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_z","setup":{"length":0.29,"regist":0.57,"mass":0.26},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_Z","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_aa","setup":{"length":0.25,"regist":0.57,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AA","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_ab","setup":{"length":0.26,"regist":0.58,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AB","ptype":"angle","scale":0.028,"weight":1}]},{"label":"clothes_ac","setup":{"length":0.15,"regist":0.55,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AC","ptype":"angle","scale":0.025,"weight":1}]},{"label":"clothes_ad","setup":{"length":0.16,"regist":0.59,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AD","ptype":"angle","scale":0.023,"weight":1}]},{"label":"clothes_ae","setup":{"length":0.18,"regist":0.58,"mass":0.16},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AE","ptype":"angle","scale":0.025,"weight":1}]},{"label":"clothes_af","setup":{"length":0.2,"regist":0.61,"mass":0.19},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AF","ptype":"angle","scale":0.025,"weight":1}]}]}]]></content>
       
     </entry>
     
@@ -848,17 +859,6 @@
       <url>/live2d_models/live2d/chara/037_general_rip/angry03.exp.json</url>
       
         <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":1.1,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-1},{"id":"PARAM_EYE_L_OPEN","val":1.1,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-1},{"id":"PARAM_EYE_SCALE","val":-1},{"id":"PARAM_BROW_R_Y","val":-0.52},{"id":"PARAM_BROW_R_X","val":-0.39},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.62},{"id":"PARAM_BROW_L_X","val":-0.39},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":0.57}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/angry02.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/angry02.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-1},{"id":"PARAM_EYE_L_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-1},{"id":"PARAM_BROW_R_Y","val":-0.67},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.67},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
       
     </entry>
     
@@ -899,10 +899,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/idle01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/idle01.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/angry04.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/angry04.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.45},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.45},{"id":"PARAM_BROW_R_Y","val":-0.14},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.72},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-0.14},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
       
     </entry>
     
@@ -921,10 +921,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/kandou01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/kandou01.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/idle01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/idle01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_R","val":1},{"id":"PARAM_EYE_L_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_L","val":1},{"id":"PARAM_EYE_SCALE","val":-0.25},{"id":"PARAM_BROW_R_Y","val":0.44},{"id":"PARAM_BROW_R_X","val":0.1},{"id":"PARAM_BROW_R_ANGLE","val":0.9},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_Y","val":0.44},{"id":"PARAM_BROW_L_X","val":0.1},{"id":"PARAM_BROW_L_ANGLE","val":0.9},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.04},{"id":"PARAM_MOUTH_SCALE","val":-1},{"id":"PARAM_CHEEK","val":0.27},{"id":"PARAM_CHEEK2","val":0.5}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500}]]></content>
       
     </entry>
     
@@ -943,6 +943,17 @@
     
     <entry>
       <title></title>
+      <link href="/live2d_models/live2d/chara/037_general_rip/kandou01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/kandou01.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_R","val":1},{"id":"PARAM_EYE_L_OPEN","val":0.86,"calc":"mult"},{"id":"PARAM_EYELID_L","val":1},{"id":"PARAM_EYE_SCALE","val":-0.25},{"id":"PARAM_BROW_R_Y","val":0.44},{"id":"PARAM_BROW_R_X","val":0.1},{"id":"PARAM_BROW_R_ANGLE","val":0.9},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_Y","val":0.44},{"id":"PARAM_BROW_L_X","val":0.1},{"id":"PARAM_BROW_L_ANGLE","val":0.9},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.04},{"id":"PARAM_MOUTH_SCALE","val":-1},{"id":"PARAM_CHEEK","val":0.27},{"id":"PARAM_CHEEK2","val":0.5}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/live2d_models/live2d/chara/037_general_rip/kandou02.exp.json"/>
       <url>/live2d_models/live2d/chara/037_general_rip/kandou02.exp.json</url>
       
@@ -954,10 +965,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/sad01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/sad01.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/kime02.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/kime02.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.75,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYE_L_OPEN","val":0.75,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":1},{"id":"PARAM_BROW_R_Y","val":0.22},{"id":"PARAM_BROW_R_ANGLE","val":0.3},{"id":"PARAM_BROW_R_FORM","val":-0.41},{"id":"PARAM_BROW_L_Y","val":0.23},{"id":"PARAM_BROW_L_ANGLE","val":0.28},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.34}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.85,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.36},{"id":"PARAM_EYE_L_OPEN","val":0.85,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.36},{"id":"PARAM_BROW_R_Y","val":-0.17},{"id":"PARAM_BROW_R_X","val":-0.19},{"id":"PARAM_BROW_R_ANGLE","val":-0.45},{"id":"PARAM_BROW_R_FORM","val":-0.32},{"id":"PARAM_BROW_L_Y","val":-0.17},{"id":"PARAM_BROW_L_X","val":-0.19},{"id":"PARAM_BROW_L_ANGLE","val":-0.45},{"id":"PARAM_BROW_L_FORM","val":-0.32},{"id":"PARAM_MOUTH_FORM_01","val":-0.41},{"id":"PARAM_MOUTH_SCALE","val":-0.67}]}]]></content>
       
     </entry>
     
@@ -965,10 +976,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/kime02.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/kime02.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/sad01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/sad01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.85,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.36},{"id":"PARAM_EYE_L_OPEN","val":0.85,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.36},{"id":"PARAM_BROW_R_Y","val":-0.17},{"id":"PARAM_BROW_R_X","val":-0.19},{"id":"PARAM_BROW_R_ANGLE","val":-0.45},{"id":"PARAM_BROW_R_FORM","val":-0.32},{"id":"PARAM_BROW_L_Y","val":-0.17},{"id":"PARAM_BROW_L_X","val":-0.19},{"id":"PARAM_BROW_L_ANGLE","val":-0.45},{"id":"PARAM_BROW_L_FORM","val":-0.32},{"id":"PARAM_MOUTH_FORM_01","val":-0.41},{"id":"PARAM_MOUTH_SCALE","val":-0.67}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.75,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYE_L_OPEN","val":0.75,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":1},{"id":"PARAM_BROW_R_Y","val":0.22},{"id":"PARAM_BROW_R_ANGLE","val":0.3},{"id":"PARAM_BROW_R_FORM","val":-0.41},{"id":"PARAM_BROW_L_Y","val":0.23},{"id":"PARAM_BROW_L_ANGLE","val":0.28},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.34}]}]]></content>
       
     </entry>
     
@@ -1020,10 +1031,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/smile04.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/smile04.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/shame02.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/shame02.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":1},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_EYE_HIGHLIGHT","val":1},{"id":"PARAM_BROW_R_Y","val":-0.39},{"id":"PARAM_BROW_R_X","val":0.1},{"id":"PARAM_BROW_R_ANGLE","val":0.64},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_Y","val":-0.39},{"id":"PARAM_BROW_L_X","val":0.1},{"id":"PARAM_BROW_L_ANGLE","val":0.64},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.4}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.82},{"id":"PARAM_EYE_L_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.82},{"id":"PARAM_EYE_FORM","val":1},{"id":"PARAM_BROW_R_Y","val":-0.6},{"id":"PARAM_BROW_R_X","val":-0.3},{"id":"PARAM_BROW_R_ANGLE","val":-0.35},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.6},{"id":"PARAM_BROW_L_X","val":-0.3},{"id":"PARAM_BROW_L_ANGLE","val":-0.35},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK","val":0.61},{"id":"PARAM_CHEEK2","val":1}]}]]></content>
       
     </entry>
     
@@ -1053,21 +1064,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/shame02.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/shame02.exp.json</url>
+      <link href="/live2d_models/live2d/chara/037_general_rip/smile04.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/smile04.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.82},{"id":"PARAM_EYE_L_OPEN","val":0.67,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.82},{"id":"PARAM_EYE_FORM","val":1},{"id":"PARAM_BROW_R_Y","val":-0.6},{"id":"PARAM_BROW_R_X","val":-0.3},{"id":"PARAM_BROW_R_ANGLE","val":-0.35},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.6},{"id":"PARAM_BROW_L_X","val":-0.3},{"id":"PARAM_BROW_L_ANGLE","val":-0.35},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK","val":0.61},{"id":"PARAM_CHEEK2","val":1}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/thinking01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/thinking01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_EYE_L_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_BROW_R_Y","val":0.22},{"id":"PARAM_BROW_R_ANGLE","val":0.3},{"id":"PARAM_BROW_R_FORM","val":-0.41},{"id":"PARAM_BROW_L_Y","val":0.23},{"id":"PARAM_BROW_L_ANGLE","val":0.28},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.34}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":1},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_EYE_HIGHLIGHT","val":1},{"id":"PARAM_BROW_R_Y","val":-0.39},{"id":"PARAM_BROW_R_X","val":0.1},{"id":"PARAM_BROW_R_ANGLE","val":0.64},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_Y","val":-0.39},{"id":"PARAM_BROW_L_X","val":0.1},{"id":"PARAM_BROW_L_ANGLE","val":0.64},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.4}]}]]></content>
       
     </entry>
     
@@ -1086,32 +1086,21 @@
     
     <entry>
       <title></title>
+      <link href="/live2d_models/live2d/chara/037_general_rip/thinking01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/thinking01.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_EYE_L_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_BROW_R_Y","val":0.22},{"id":"PARAM_BROW_R_ANGLE","val":0.3},{"id":"PARAM_BROW_R_FORM","val":-0.41},{"id":"PARAM_BROW_L_Y","val":0.23},{"id":"PARAM_BROW_L_ANGLE","val":0.28},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.34}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/live2d_models/live2d/chara/037_general_rip/thinking02.exp.json"/>
       <url>/live2d_models/live2d/chara/037_general_rip/thinking02.exp.json</url>
       
         <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.85,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.36},{"id":"PARAM_EYE_L_OPEN","val":0.7,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.36},{"id":"PARAM_BROW_R_Y","val":0.1},{"id":"PARAM_BROW_R_X","val":-0.24},{"id":"PARAM_BROW_R_ANGLE","val":-0.27},{"id":"PARAM_BROW_R_FORM","val":-0.33},{"id":"PARAM_BROW_L_Y","val":-0.38},{"id":"PARAM_BROW_L_X","val":-0.25},{"id":"PARAM_BROW_L_ANGLE","val":0.23},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.48}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/live2d/chara/037_general_rip/wink01.exp.json"/>
-      <url>/live2d_models/live2d/chara/037_general_rip/wink01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.81,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":0.83},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_BROW_R_Y","val":0.17},{"id":"PARAM_BROW_R_X","val":-0.01},{"id":"PARAM_BROW_R_ANGLE","val":0.62},{"id":"PARAM_BROW_R_FORM","val":0.46},{"id":"PARAM_BROW_L_Y","val":-0.4},{"id":"PARAM_BROW_L_X","val":-0.34},{"id":"PARAM_BROW_L_ANGLE","val":0.66},{"id":"PARAM_BROW_L_FORM","val":-0.19},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.69}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/live2d/chara/037_live_event_253_ur_rip/anon_event253.physics.json"/>
-      <url>/live2d_models/live2d/chara/037_live_event_253_ur_rip/anon_event253.physics.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"clothes_a","setup":{"length":0.13,"regist":0.55,"mass":0.12},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_A","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_b","setup":{"length":0.17,"regist":0.6,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_B","ptype":"angle","scale":0.018,"weight":1}]},{"label":"clothes_c","setup":{"length":0.17,"regist":0.45,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_C","ptype":"angle","scale":0.018,"weight":1}]},{"label":"clothes_d","setup":{"length":0.16,"regist":0.56,"mass":0.14},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_D","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_e","setup":{"length":0.18,"regist":0.56,"mass":0.2},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_E","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_f","setup":{"length":0.12,"regist":0.56,"mass":0.13},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_F","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_g","setup":{"length":0.15,"regist":0.55,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_G","ptype":"angle","scale":0.015,"weight":1}]},{"label":"clothes_h","setup":{"length":0.15,"regist":0.55,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_H","ptype":"angle","scale":0.015,"weight":1}]},{"label":"clothes_i","setup":{"length":0.12,"regist":0.54,"mass":0.13},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_I","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_j","setup":{"length":0.2,"regist":0.53,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_J","ptype":"angle","scale":0.017,"weight":1}]},{"label":"clothes_k","setup":{"length":0.23,"regist":0.6,"mass":0.2},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_K","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_l","setup":{"length":0.12,"regist":0.55,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_L","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_m","setup":{"length":0.2,"regist":0.58,"mass":0.24},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_M","ptype":"angle","scale":0.027,"weight":1}]},{"label":"clothes_n","setup":{"length":0.15,"regist":0.5,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_N","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_o","setup":{"length":0.14,"regist":0.58,"mass":0.12},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_O","ptype":"angle","scale":0.028,"weight":1}]},{"label":"clothes_p","setup":{"length":0.15,"regist":0.58,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_P","ptype":"angle","scale":0.021,"weight":1}]},{"label":"clothes_q","setup":{"length":0.19,"regist":0.58,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_Q","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_r","setup":{"length":0.15,"regist":0.58,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_R","ptype":"angle","scale":0.023,"weight":1}]},{"label":"clothes_s","setup":{"length":0.18,"regist":0.55,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_S","ptype":"angle","scale":0.028,"weight":1}]},{"label":"clothes_t","setup":{"length":0.18,"regist":0.6,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_T","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_u","setup":{"length":0.21,"regist":0.58,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_U","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_v","setup":{"length":0.15,"regist":0.52,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_V","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_w","setup":{"length":0.19,"regist":0.58,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_W","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_x","setup":{"length":0.23,"regist":0.55,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_X","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_y","setup":{"length":0.25,"regist":0.57,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_Y","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_z","setup":{"length":0.29,"regist":0.57,"mass":0.26},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_Z","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_aa","setup":{"length":0.25,"regist":0.57,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AA","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_ab","setup":{"length":0.26,"regist":0.58,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AB","ptype":"angle","scale":0.028,"weight":1}]},{"label":"clothes_ac","setup":{"length":0.15,"regist":0.55,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AC","ptype":"angle","scale":0.025,"weight":1}]},{"label":"clothes_ad","setup":{"length":0.16,"regist":0.59,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AD","ptype":"angle","scale":0.023,"weight":1}]},{"label":"clothes_ae","setup":{"length":0.18,"regist":0.58,"mass":0.16},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AE","ptype":"angle","scale":0.025,"weight":1}]},{"label":"clothes_af","setup":{"length":0.2,"regist":0.61,"mass":0.19},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AF","ptype":"angle","scale":0.025,"weight":1}]}]}]]></content>
       
     </entry>
     
@@ -1130,32 +1119,21 @@
     
     <entry>
       <title></title>
+      <link href="/live2d_models/live2d/chara/037_general_rip/wink01.exp.json"/>
+      <url>/live2d_models/live2d/chara/037_general_rip/wink01.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.81,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":0.83},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_BROW_R_Y","val":0.17},{"id":"PARAM_BROW_R_X","val":-0.01},{"id":"PARAM_BROW_R_ANGLE","val":0.62},{"id":"PARAM_BROW_R_FORM","val":0.46},{"id":"PARAM_BROW_L_Y","val":-0.4},{"id":"PARAM_BROW_L_X","val":-0.34},{"id":"PARAM_BROW_L_ANGLE","val":0.66},{"id":"PARAM_BROW_L_FORM","val":-0.19},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.69}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/live2d_models/live2d/chara/037_general_rip/smile01.exp.json"/>
       <url>/live2d_models/live2d/chara/037_general_rip/smile01.exp.json</url>
       
         <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_MOUTH_FORM_01","val":0.5}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_live_event_253_ur_rip/anon_event253.physics.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_live_event_253_ur_rip/anon_event253.physics.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"clothes_a","setup":{"length":0.13,"regist":0.55,"mass":0.12},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_A","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_b","setup":{"length":0.17,"regist":0.6,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_B","ptype":"angle","scale":0.018,"weight":1}]},{"label":"clothes_c","setup":{"length":0.17,"regist":0.45,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_C","ptype":"angle","scale":0.018,"weight":1}]},{"label":"clothes_d","setup":{"length":0.16,"regist":0.56,"mass":0.14},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_D","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_e","setup":{"length":0.18,"regist":0.56,"mass":0.2},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_E","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_f","setup":{"length":0.12,"regist":0.56,"mass":0.13},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_F","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_g","setup":{"length":0.15,"regist":0.55,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_G","ptype":"angle","scale":0.015,"weight":1}]},{"label":"clothes_h","setup":{"length":0.15,"regist":0.55,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_H","ptype":"angle","scale":0.015,"weight":1}]},{"label":"clothes_i","setup":{"length":0.12,"regist":0.54,"mass":0.13},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_I","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_j","setup":{"length":0.2,"regist":0.53,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_J","ptype":"angle","scale":0.017,"weight":1}]},{"label":"clothes_k","setup":{"length":0.23,"regist":0.6,"mass":0.2},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_K","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_l","setup":{"length":0.12,"regist":0.55,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_L","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_m","setup":{"length":0.2,"regist":0.58,"mass":0.24},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_M","ptype":"angle","scale":0.027,"weight":1}]},{"label":"clothes_n","setup":{"length":0.15,"regist":0.5,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_N","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_o","setup":{"length":0.14,"regist":0.58,"mass":0.12},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_O","ptype":"angle","scale":0.028,"weight":1}]},{"label":"clothes_p","setup":{"length":0.15,"regist":0.58,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_P","ptype":"angle","scale":0.021,"weight":1}]},{"label":"clothes_q","setup":{"length":0.19,"regist":0.58,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_Q","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_r","setup":{"length":0.15,"regist":0.58,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_R","ptype":"angle","scale":0.023,"weight":1}]},{"label":"clothes_s","setup":{"length":0.18,"regist":0.55,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_S","ptype":"angle","scale":0.028,"weight":1}]},{"label":"clothes_t","setup":{"length":0.18,"regist":0.6,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_T","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_u","setup":{"length":0.21,"regist":0.58,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_U","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_v","setup":{"length":0.15,"regist":0.52,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_V","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_w","setup":{"length":0.19,"regist":0.58,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_W","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_x","setup":{"length":0.23,"regist":0.55,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_X","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_y","setup":{"length":0.25,"regist":0.57,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_Y","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_z","setup":{"length":0.29,"regist":0.57,"mass":0.26},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_Z","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_aa","setup":{"length":0.25,"regist":0.57,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AA","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_ab","setup":{"length":0.26,"regist":0.58,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AB","ptype":"angle","scale":0.028,"weight":1}]},{"label":"clothes_ac","setup":{"length":0.15,"regist":0.55,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AC","ptype":"angle","scale":0.025,"weight":1}]},{"label":"clothes_ad","setup":{"length":0.16,"regist":0.59,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AD","ptype":"angle","scale":0.023,"weight":1}]},{"label":"clothes_ae","setup":{"length":0.18,"regist":0.58,"mass":0.16},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AE","ptype":"angle","scale":0.025,"weight":1}]},{"label":"clothes_af","setup":{"length":0.2,"regist":0.61,"mass":0.19},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AF","ptype":"angle","scale":0.025,"weight":1}]}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry01.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.61,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.72},{"id":"PARAM_EYE_L_OPEN","val":0.61,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.51},{"id":"PARAM_BROW_R_Y","val":-0.63},{"id":"PARAM_BROW_R_X","val":-0.23},{"id":"PARAM_BROW_R_ANGLE","val":-0.53},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.1},{"id":"PARAM_BROW_L_X","val":-0.23},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
       
     </entry>
     
@@ -1174,10 +1152,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry03.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry03.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":1.1,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-1},{"id":"PARAM_EYE_L_OPEN","val":1.1,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-1},{"id":"PARAM_EYE_SCALE","val":-1},{"id":"PARAM_BROW_R_Y","val":-0.52},{"id":"PARAM_BROW_R_X","val":-0.39},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.62},{"id":"PARAM_BROW_L_X","val":-0.39},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":0.57}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.61,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.72},{"id":"PARAM_EYE_L_OPEN","val":0.61,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.51},{"id":"PARAM_BROW_R_Y","val":-0.63},{"id":"PARAM_BROW_R_X","val":-0.23},{"id":"PARAM_BROW_R_ANGLE","val":-0.53},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.1},{"id":"PARAM_BROW_L_X","val":-0.23},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
       
     </entry>
     
@@ -1196,10 +1174,21 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry04.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry04.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry03.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry03.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.45},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.45},{"id":"PARAM_BROW_R_Y","val":-0.14},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.72},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-0.14},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":1.1,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-1},{"id":"PARAM_EYE_L_OPEN","val":1.1,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-1},{"id":"PARAM_EYE_SCALE","val":-1},{"id":"PARAM_BROW_R_Y","val":-0.52},{"id":"PARAM_BROW_R_X","val":-0.39},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.62},{"id":"PARAM_BROW_L_X","val":-0.39},{"id":"PARAM_BROW_L_ANGLE","val":-1},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":0.57}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry02.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry02.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYELID_R","val":-0.71},{"id":"PARAM_EYELID_L","val":-0.71},{"id":"PARAM_TEAR","val":1},{"id":"PARAM_BROW_R_Y","val":-0.35},{"id":"PARAM_BROW_R_X","val":-0.5},{"id":"PARAM_BROW_R_ANGLE","val":0.35},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.35},{"id":"PARAM_BROW_L_X","val":-0.5},{"id":"PARAM_BROW_L_ANGLE","val":0.35},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":0.5}]}]]></content>
       
     </entry>
     
@@ -1218,10 +1207,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry02.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/cry02.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry04.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/angry04.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYELID_R","val":-0.71},{"id":"PARAM_EYELID_L","val":-0.71},{"id":"PARAM_TEAR","val":1},{"id":"PARAM_BROW_R_Y","val":-0.35},{"id":"PARAM_BROW_R_X","val":-0.5},{"id":"PARAM_BROW_R_ANGLE","val":0.35},{"id":"PARAM_BROW_R_FORM","val":-1},{"id":"PARAM_BROW_L_Y","val":-0.35},{"id":"PARAM_BROW_L_X","val":-0.5},{"id":"PARAM_BROW_L_ANGLE","val":0.35},{"id":"PARAM_BROW_L_FORM","val":-1},{"id":"PARAM_MOUTH_FORM_01","val":0.5}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.45},{"id":"PARAM_EYE_L_OPEN","val":0.62,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.45},{"id":"PARAM_BROW_R_Y","val":-0.14},{"id":"PARAM_BROW_R_X","val":-0.2},{"id":"PARAM_BROW_R_ANGLE","val":-1},{"id":"PARAM_BROW_R_FORM","val":-0.5},{"id":"PARAM_BROW_L_Y","val":-0.72},{"id":"PARAM_BROW_L_X","val":-0.2},{"id":"PARAM_BROW_L_ANGLE","val":-0.14},{"id":"PARAM_BROW_L_FORM","val":-0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
       
     </entry>
     
@@ -1306,6 +1295,17 @@
     
     <entry>
       <title></title>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/serious02.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/serious02.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.65,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.71},{"id":"PARAM_EYE_L_OPEN","val":0.65,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.71},{"id":"PARAM_BROW_R_Y","val":0.05},{"id":"PARAM_BROW_R_X","val":-0.33},{"id":"PARAM_BROW_R_ANGLE","val":-0.23},{"id":"PARAM_BROW_R_FORM","val":-0.29},{"id":"PARAM_BROW_L_Y","val":-0.15},{"id":"PARAM_BROW_L_X","val":-0.33},{"id":"PARAM_BROW_L_ANGLE","val":0.04},{"id":"PARAM_BROW_L_FORM","val":-0.33},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/sad02.exp.json"/>
       <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/sad02.exp.json</url>
       
@@ -1321,17 +1321,6 @@
       <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/serious01.exp.json</url>
       
         <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.8,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.35},{"id":"PARAM_EYE_L_OPEN","val":0.8,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.35},{"id":"PARAM_BROW_R_Y","val":-0.16},{"id":"PARAM_BROW_R_X","val":-0.16},{"id":"PARAM_BROW_R_ANGLE","val":-0.57},{"id":"PARAM_BROW_R_FORM","val":-0.66},{"id":"PARAM_BROW_L_Y","val":-0.16},{"id":"PARAM_BROW_L_X","val":-0.16},{"id":"PARAM_BROW_L_ANGLE","val":-0.57},{"id":"PARAM_BROW_L_FORM","val":-0.66},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.5}]}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/serious02.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/serious02.exp.json</url>
-      
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.65,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.71},{"id":"PARAM_EYE_L_OPEN","val":0.65,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.71},{"id":"PARAM_BROW_R_Y","val":0.05},{"id":"PARAM_BROW_R_X","val":-0.33},{"id":"PARAM_BROW_R_ANGLE","val":-0.23},{"id":"PARAM_BROW_R_FORM","val":-0.29},{"id":"PARAM_BROW_L_Y","val":-0.15},{"id":"PARAM_BROW_L_X","val":-0.33},{"id":"PARAM_BROW_L_ANGLE","val":0.04},{"id":"PARAM_BROW_L_FORM","val":-0.33},{"id":"PARAM_MOUTH_FORM_01","val":-0.4}]}]]></content>
       
     </entry>
     
@@ -1405,10 +1394,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/surprised01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/surprised01.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":1.27,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.39},{"id":"PARAM_EYE_L_OPEN","val":1.27,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.39},{"id":"PARAM_EYE_SCALE","val":-1},{"id":"PARAM_BROW_R_X","val":0.05},{"id":"PARAM_BROW_R_ANGLE","val":0.7},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_X","val":0.05},{"id":"PARAM_BROW_L_ANGLE","val":0.7},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.33}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_EYE_L_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_BROW_R_Y","val":0.22},{"id":"PARAM_BROW_R_ANGLE","val":0.3},{"id":"PARAM_BROW_R_FORM","val":-0.41},{"id":"PARAM_BROW_L_Y","val":0.23},{"id":"PARAM_BROW_L_ANGLE","val":0.28},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.34}]}]]></content>
       
     </entry>
     
@@ -1416,10 +1405,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking01.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/surprised01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/surprised01.exp.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_EYE_L_OPEN","val":0.69,"calc":"mult"},{"id":"PARAM_BROW_R_Y","val":0.22},{"id":"PARAM_BROW_R_ANGLE","val":0.3},{"id":"PARAM_BROW_R_FORM","val":-0.41},{"id":"PARAM_BROW_L_Y","val":0.23},{"id":"PARAM_BROW_L_ANGLE","val":0.28},{"id":"PARAM_BROW_L_FORM","val":-0.4},{"id":"PARAM_MOUTH_FORM_01","val":-0.37},{"id":"PARAM_MOUTH_SCALE","val":-0.34}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":1.27,"calc":"mult"},{"id":"PARAM_EYELID_R","val":-0.39},{"id":"PARAM_EYE_L_OPEN","val":1.27,"calc":"mult"},{"id":"PARAM_EYELID_L","val":-0.39},{"id":"PARAM_EYE_SCALE","val":-1},{"id":"PARAM_BROW_R_X","val":0.05},{"id":"PARAM_BROW_R_ANGLE","val":0.7},{"id":"PARAM_BROW_R_FORM","val":0.5},{"id":"PARAM_BROW_L_X","val":0.05},{"id":"PARAM_BROW_L_ANGLE","val":0.7},{"id":"PARAM_BROW_L_FORM","val":0.5},{"id":"PARAM_MOUTH_FORM_01","val":-0.33}]}]]></content>
       
     </entry>
     
@@ -1438,6 +1427,17 @@
     
     <entry>
       <title></title>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/wink01.exp.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/wink01.exp.json</url>
+      
+        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.81,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":0.83},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_BROW_R_Y","val":0.17},{"id":"PARAM_BROW_R_X","val":-0.01},{"id":"PARAM_BROW_R_ANGLE","val":0.62},{"id":"PARAM_BROW_R_FORM","val":0.46},{"id":"PARAM_BROW_L_Y","val":-0.4},{"id":"PARAM_BROW_L_X","val":-0.34},{"id":"PARAM_BROW_L_ANGLE","val":0.66},{"id":"PARAM_BROW_L_FORM","val":-0.19},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.69}]}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking03.exp.json"/>
       <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/thinking03.exp.json</url>
       
@@ -1449,10 +1449,10 @@
     
     <entry>
       <title></title>
-      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/wink01.exp.json"/>
-      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_general_rip/wink01.exp.json</url>
+      <link href="/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_live_event_253_ur_rip/anon_event253.physics.json"/>
+      <url>/live2d_models/037_live_event_253_ur_rip/live2d/chara/037_live_event_253_ur_rip/anon_event253.physics.json</url>
       
-        <content type="html"><![CDATA[{"type":"Live2D Expression","fade_in":500,"fade_out":500,"params":[{"id":"PARAM_EYE_R_OPEN","val":0.81,"calc":"mult"},{"id":"PARAM_EYE_R_SMILE","val":1},{"id":"PARAM_EYELID_R","val":-0.68},{"id":"PARAM_EYE_L_OPEN","val":0,"calc":"mult"},{"id":"PARAM_EYE_L_SMILE","val":0.83},{"id":"PARAM_EYELID_L","val":-0.66},{"id":"PARAM_BROW_R_Y","val":0.17},{"id":"PARAM_BROW_R_X","val":-0.01},{"id":"PARAM_BROW_R_ANGLE","val":0.62},{"id":"PARAM_BROW_R_FORM","val":0.46},{"id":"PARAM_BROW_L_Y","val":-0.4},{"id":"PARAM_BROW_L_X","val":-0.34},{"id":"PARAM_BROW_L_ANGLE","val":0.66},{"id":"PARAM_BROW_L_FORM","val":-0.19},{"id":"PARAM_MOUTH_FORM_01","val":0.25},{"id":"PARAM_CHEEK2","val":0.69}]}]]></content>
+        <content type="html"><![CDATA[{"type":"Live2D Physics","physics_hair":[{"label":"clothes_a","setup":{"length":0.13,"regist":0.55,"mass":0.12},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_A","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_b","setup":{"length":0.17,"regist":0.6,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_B","ptype":"angle","scale":0.018,"weight":1}]},{"label":"clothes_c","setup":{"length":0.17,"regist":0.45,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_C","ptype":"angle","scale":0.018,"weight":1}]},{"label":"clothes_d","setup":{"length":0.16,"regist":0.56,"mass":0.14},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_D","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_e","setup":{"length":0.18,"regist":0.56,"mass":0.2},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_E","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_f","setup":{"length":0.12,"regist":0.56,"mass":0.13},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_F","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_g","setup":{"length":0.15,"regist":0.55,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_G","ptype":"angle","scale":0.015,"weight":1}]},{"label":"clothes_h","setup":{"length":0.15,"regist":0.55,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":2.4,"weight":0.5},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.015,"weight":0.5},{"id":"PARAM_ANGLE_Z","ptype":"angle","scale":0.8,"weight":2},{"id":"PARAM_ANGLE_X","ptype":"x","scale":0.005,"weight":2}],"targets":[{"id":"PARAM_CLOTHES_H","ptype":"angle","scale":0.015,"weight":1}]},{"label":"clothes_i","setup":{"length":0.12,"regist":0.54,"mass":0.13},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_I","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_j","setup":{"length":0.2,"regist":0.53,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_J","ptype":"angle","scale":0.017,"weight":1}]},{"label":"clothes_k","setup":{"length":0.23,"regist":0.6,"mass":0.2},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_K","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_l","setup":{"length":0.12,"regist":0.55,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_L","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_m","setup":{"length":0.2,"regist":0.58,"mass":0.24},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_M","ptype":"angle","scale":0.027,"weight":1}]},{"label":"clothes_n","setup":{"length":0.15,"regist":0.5,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_N","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_o","setup":{"length":0.14,"regist":0.58,"mass":0.12},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_O","ptype":"angle","scale":0.028,"weight":1}]},{"label":"clothes_p","setup":{"length":0.15,"regist":0.58,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_P","ptype":"angle","scale":0.021,"weight":1}]},{"label":"clothes_q","setup":{"length":0.19,"regist":0.58,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_Q","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_r","setup":{"length":0.15,"regist":0.58,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_R","ptype":"angle","scale":0.023,"weight":1}]},{"label":"clothes_s","setup":{"length":0.18,"regist":0.55,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_S","ptype":"angle","scale":0.028,"weight":1}]},{"label":"clothes_t","setup":{"length":0.18,"regist":0.6,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_T","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_u","setup":{"length":0.21,"regist":0.58,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_U","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_v","setup":{"length":0.15,"regist":0.52,"mass":0.18},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_V","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_w","setup":{"length":0.19,"regist":0.58,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_W","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_x","setup":{"length":0.23,"regist":0.55,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_X","ptype":"angle","scale":0.02,"weight":1}]},{"label":"clothes_y","setup":{"length":0.25,"regist":0.57,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_Y","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_z","setup":{"length":0.29,"regist":0.57,"mass":0.26},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_Z","ptype":"angle","scale":0.03,"weight":1}]},{"label":"clothes_aa","setup":{"length":0.25,"regist":0.57,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AA","ptype":"angle","scale":0.024,"weight":1}]},{"label":"clothes_ab","setup":{"length":0.26,"regist":0.58,"mass":0.21},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AB","ptype":"angle","scale":0.028,"weight":1}]},{"label":"clothes_ac","setup":{"length":0.15,"regist":0.55,"mass":0.17},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AC","ptype":"angle","scale":0.025,"weight":1}]},{"label":"clothes_ad","setup":{"length":0.16,"regist":0.59,"mass":0.15},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AD","ptype":"angle","scale":0.023,"weight":1}]},{"label":"clothes_ae","setup":{"length":0.18,"regist":0.58,"mass":0.16},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AE","ptype":"angle","scale":0.025,"weight":1}]},{"label":"clothes_af","setup":{"length":0.2,"regist":0.61,"mass":0.19},"src":[{"id":"PARAM_BODY_ANGLE_Z","ptype":"angle","scale":0.8,"weight":1},{"id":"PARAM_BODY_ANGLE_X","ptype":"x","scale":0.005,"weight":1}],"targets":[{"id":"PARAM_CLOTHES_AF","ptype":"angle","scale":0.025,"weight":1}]}]}]]></content>
       
     </entry>
     
