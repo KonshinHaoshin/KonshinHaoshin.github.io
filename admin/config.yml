@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: KonshinHaoshin/KonshinHaoshin.github.io
   branch: main  # 根据仓库主分支名称调整
   base_url: https://www.yunba.icu/
@@ -15,4 +15,5 @@ collections:
       - { label: "标题", name: "title", widget: "string" }
       - { label: "发布日期", name: "date", widget: "datetime" }
       - { label: "标签", name: "tags", widget: "list" }
+      - { label: "作者",name: "copyright_author", widget: "string"}
       - { label: "正文", name: "body", widget: "markdown" }
