@@ -2,12 +2,151 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <link rel="icon" href="/img/favicon01.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Netlify CMS</title>
+    <title>欢迎登陆邦多礼庇护所！</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 20px;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            transition: transform 0.3s ease;
+        }
+
+        .login-container {
+            position: relative;
+            top: -80px; /* 上移 30px */
+        }
+
+        .login-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .branding {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #2a5298;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Netlify Identity Widget 样式覆盖 */
+        .netlify-identity-button {
+            width: 100%;
+            padding: 12px;
+            background: #2a5298 !important;
+            color: white !important;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .netlify-identity-button:hover {
+            background: #1e3c72 !important;
+        }
+
+        .netlify-identity-widget {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .netlify-identity-item input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .netlify-identity-item input:focus {
+            outline: none;
+            border-color: #2a5298;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            color: #2a5298;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-<script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+<div class="login-container">
+    <div class="branding">
+        <img src="/img/favicon01.png" alt="邦多礼徽标" class="logo">
+        <h1>邦多礼庇护所</h1>
+        <p>他们的过去是一杯腐茶，</p>
+        <p>不能打开。不能相认。不能说话。</p>
+    </div>
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <div class="loading">加载中...</div>
+</div>
+
+<script>
+    // 添加加载状态
+    document.addEventListener('DOMContentLoaded', () => {
+        const loading = document.querySelector('.loading');
+        const widget = document.querySelector('.netlify-identity-widget');
+
+        if(widget) {
+            widget.style.display = 'none';
+            loading.style.display = 'block';
+
+            setTimeout(() => {
+                widget.style.display = 'block';
+                loading.style.display = 'none';
+            }, 1000);
+        }
+    });
+</script>
 </body>
 </html>
