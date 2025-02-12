@@ -27,14 +27,14 @@
 
         .login-container {
             background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
+            padding: 30px;
             border-radius: 20px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 400px;
             transition: transform 0.3s ease;
             position: relative;
-            top: -80px; /* 上移 30px */
+            top: -80px;
         }
 
         .login-container:hover {
@@ -43,34 +43,35 @@
 
         .branding {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .logo {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 15px;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
         }
 
         h1 {
             color: #2a5298;
-            font-size: 24px;
+            font-size: 22px;
             margin-bottom: 5px;
         }
 
         p {
             color: #666;
             font-size: 14px;
+            line-height: 1.5;
         }
 
         .back-button {
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 15px;
+            left: 15px;
             background: none;
             border: none;
             color: #2a5298;
-            font-size: 24px;
+            font-size: 20px;
             cursor: pointer;
             transition: color 0.3s ease;
         }
@@ -88,17 +89,28 @@
 
         @media (max-width: 480px) {
             .login-container {
-                padding: 25px;
+                padding: 20px;
+                top: 0; /* 取消上移 */
+                max-width: 90%; /* 增加宽度限制 */
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
             }
 
             h1 {
                 font-size: 20px;
             }
-        }
 
-        @media (max-width: 480px) {
-            .login-container {
-                display: none; /* 在小屏幕上隐藏 */
+            p {
+                font-size: 13px;
+            }
+
+            .back-button {
+                font-size: 18px;
+                top: 10px;
+                left: 10px;
             }
         }
     </style>
@@ -137,9 +149,8 @@
         }
     });
 
-    // 返回主页面的函数
     function goBack() {
-        window.location.href = '/'; // 将 '/' 替换为你的主页面 URL
+        window.location.href = '/';
     }
 </script>
 </body>
