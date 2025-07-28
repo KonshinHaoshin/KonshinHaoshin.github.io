@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>邦多礼庇护所</title><meta name="author" content="东山燃灯寺"><meta name="copyright" content="东山燃灯寺"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一个收录各种神奇作品的网站">
+<meta property="og:type" content="website">
+<meta property="og:title" content="邦多礼庇护所">
+<meta property="og:url" content="http://yunba.icu/page/5/index.html">
+<meta property="og:site_name" content="邦多礼庇护所">
+<meta property="og:description" content="一个收录各种神奇作品的网站">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yunba.icu/img/favicon01.png">
+<meta property="article:author" content="东山燃灯寺">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yunba.icu/img/favicon01.png"><link rel="shortcut icon" href="/img/favicon01.png"><link rel="canonical" href="http://yunba.icu/page/5/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '邦多礼庇护所',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><link rel="stylesheet" href="/css/readPercent.css"><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/universe.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(img/background_01.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/favicon01.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">112</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">81</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/admin/"><i class="fa-fw fas fa-sign-in-alt"></i><span> 登录</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comment"></i><span> 评论</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">邦多礼庇护所</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/admin/"><i class="fa-fw fas fa-sign-in-alt"></i><span> 登录</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comment"></i><span> 评论</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">邦多礼庇护所</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://tieba.baidu.com/f?kw=%E9%82%A6%E5%A4%9A%E5%88%A9%E6%80%80%E5%AD%95&amp;fr=index" target="_blank" title="Website"><i class="fab fa-website"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/2025/02/11/25-02-11-santiansanye/" title="素睦三天三夜的真相！【邦多利怀孕吧】_百度贴吧"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover_01.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="素睦三天三夜的真相！【邦多利怀孕吧】_百度贴吧"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/02/11/25-02-11-santiansanye/" title="素睦三天三夜的真相！【邦多利怀孕吧】_百度贴吧">素睦三天三夜的真相！【邦多利怀孕吧】_百度贴吧</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-11T14:54:12.000Z" title="发表于 2025-02-11 22:54:12">2025-02-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2025/02/11/25-02-11-santiansanye/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">素睦三天三夜的真相！【邦多利怀孕吧】_百度贴吧作者:悸动战士高咲白 1随着mujica第六集的播出，很多人都对里面素睦相处三天三夜的内容感到惊讶和…………一丝丝的疑惑。这两人三天时间不换衣服不洗澡吗?不吃东西不睡觉吗?而抱着这样疑惑的我，选择求助一名神秘的记者，在她的帮助下，我获得了两人三天三夜的全程录像。（试着发录像 但好像涉皇发不出去）所以只能以文字的形式进行描写，供大伙观看。前辈镇楼     2“啊！”一声尖叫，划破了若叶睦家安静的氛围。但不知为何，即使在家的佣人即使听到大小姐的房中传来这样的声音也没有任何举动。长崎素世被玩偶绊倒在地上，背与地面的紧密接触让她不由得闷哼了一声。但比起这个，更重要的是坐在床上的那个绿发少女，那个她昔日熟悉的友人，此刻正眼中含泪的看着她。“素世，拜托你，叫醒小睦。”是自己熟悉的人发出的不熟悉的声音，这到底，怎么一回事?   3楼主恰完饭了 回来更新 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/02/11/25-02-11-soyoxsoma/" title="亲职化"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover_12.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="亲职化"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/02/11/25-02-11-soyoxsoma/" title="亲职化">亲职化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-11T14:49:53.000Z" title="发表于 2025-02-11 22:49:53">2025-02-11</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B7%B2%E5%AE%8C%E7%BB%93/">已完结</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E9%8A%AE%E5%9B%B5/">銮囵</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2025/02/11/25-02-11-soyoxsoma/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">亲职化作者:遵纪守法五十铃 1都来孕吧了不写点逆天的怎么行要写就写最逆天的灵感来源于经典作品say MaMa   2“人心理动力可分为四大类，力比多、攻击力、关系、自恋，其中力比多可以通俗理解为性…”“在弗洛伊德看来，女性有着先天的同性恋倾向…”“…在青春期的春梦中，血亲成为梦境的一员是件很正常的事情。堂表兄弟姐妹、亲兄弟姐妹，乃至父母祖父母都有可能成为梦境的一员…”“…亲职化的儿童实际上在扮演他&#x2F;她自己父亲&#x2F;母亲的形象，在东方社会的语境中常常会被认为‘乖巧’‘懂事’，这样的后果到了成年后才会显现…”“……”也许是看大段文字看得双眼酸痛，素世熄灭了手机屏幕。床头柜上的闹钟显示现在正是凌晨三点。在旁人看来，这应该只是一次无比正常的半夜惊醒。可能是美梦中止，也可能是噩梦所扰，但真正情况只有素世自己知道——在梦里，她上了自己母亲。 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/02/11/25-02-11-gene/" title="【mygo恐怖/悬疑】基因缺陷"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover_07.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="【mygo恐怖/悬疑】基因缺陷"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/02/11/25-02-11-gene/" title="【mygo恐怖/悬疑】基因缺陷">【mygo恐怖/悬疑】基因缺陷</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-11T14:18:47.000Z" title="发表于 2025-02-11 22:18:47">2025-02-11</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%82%AC%E7%96%91/">悬疑</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%81%90%E6%80%96/">恐怖</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2025/02/11/25-02-11-gene/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">【mygo恐怖&#x2F;悬疑】基因缺陷作者:暴躁老割 1私光警告，ooc警告，灵感来源自某恐怖电影，这里先卖个关子，会有相似的情节，完结后会揭晓参考哪部恐怖片。故事发生在ave mujica完结，俩乐队包饺子之后（如果有包饺子的话）。   2新人第一次写渣文，轻喷 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/02/11/25-02-11-sixiang/" title="丰川祥子死后十年"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover_12.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="丰川祥子死后十年"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/02/11/25-02-11-sixiang/" title="丰川祥子死后十年">丰川祥子死后十年</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-11T14:15:53.000Z" title="发表于 2025-02-11 22:15:53">2025-02-11</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B7%B2%E5%AE%8C%E7%BB%93/">已完结</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%88%B1%E4%BA%BATV/">爱人TV</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2025/02/11/25-02-11-sixiang/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">丰川祥子死后十年【邦多利怀孕吧】_百度贴吧作者:肃木 1祥子不会出场，但处处是她的痕迹。本文为“如果高松灯的同学是霸凌者”的后续      2椎名立希靠在书店墙上，等着警员的报告。今天书店人非常多，文坛新秀高松灯的新书发布，吸引了大量读者，给警员们的蹲点造成了巨大的困难。不久，在门口的警员要乐奈向椎名立希做了个手势，表示目标接近。待目标走进柜台，三个便衣立刻上前将他扑倒在地。那人拼死挣扎，撞开三人，向门口奔去。立希眼疾手快，一拳就将对方打倒在地。要乐奈也反应迅速，给那人扣上了手铐。事情解决后，立希和要乐奈靠着警车休息。椎名立希长叹一声：“咱搜查二课真是快废了，一年接不着几个事，现在还把我们借调过来给这群年轻的干活。”要乐奈的心态很放松，嚼着抹茶味的雪花酥：“有活您也没接啊。丰川家那起失窃案也轮不到你出手，底下人自己去办了。说实在的，还是你自己闲不住，不然谁能使唤你一个课长。”俩人没再说话，作为多年的搭档，斗嘴都成了日常。要乐奈锁屏亮了，她看了一眼，对立希说：“你要的大案来了，枪击杀人，不是一般的大。” ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/02/11/25-02-11-80deng/" title="如果高松灯的同学是霸凌者"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover_07.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如果高松灯的同学是霸凌者"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/02/11/25-02-11-80deng/" title="如果高松灯的同学是霸凌者">如果高松灯的同学是霸凌者</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-11T14:14:42.000Z" title="发表于 2025-02-11 22:14:42">2025-02-11</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B7%B2%E5%AE%8C%E7%BB%93/">已完结</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%88%B1%E4%BA%BATV/">爱人TV</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2025/02/11/25-02-11-80deng/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">如果高松灯的同学是霸凌者作者:肃木 1我是一个灯厨，看不得这些（）（本文本意是想开发一种偷摸零的新似法）     2高松灯升入羽丘后，一天也没有开心过。这自然是因为同学们对她的态度。在初中，她虽然格格不入，但大家还是爱护她，喜欢她。但在羽丘，每当她站起回答问题，无论答对答错都会有一阵嗤笑。同学们之间传纸条，从高松灯这经过的时候，她曾偷偷拆开看过，全是嘲笑她的语句。高松灯对这些人本想置之不理，谁知她们却越来越过分。拆去高松灯凳子上的螺丝，害得高松灯狠摔了一跤，险些磕到后脑；抢走高松灯的笔记本，在课间当众朗读然后乱涂乱画；用高松灯的德国铅笔和蜻蜓橡皮砸她；在她月经时逼她喝冰水，然后欣赏她痛苦挣扎的神色。遭遇这一切的高松灯强撑着不哭，因为她一哭就会引发更多的笑声，那些人会强掰开她的眼睛，看着泪水在琥珀里流动。   3这天班里又多了一个新同学。“今天成为我们班一员的...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/02/11/25-02-11-guaiwuaiyin/" title="千早爱音：我的女朋友有点怪"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover_06.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="千早爱音：我的女朋友有点怪"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/02/11/25-02-11-guaiwuaiyin/" title="千早爱音：我的女朋友有点怪">千早爱音：我的女朋友有点怪</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-11T14:10:36.000Z" title="发表于 2025-02-11 22:10:36">2025-02-11</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%88%B1all/">爱all</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%A4%AA%E7%9B%91/">太监</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2025/02/11/25-02-11-guaiwuaiyin/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">千早爱音：我的女朋友有点怪作者:诗鸽鸽 1就是除了爱音，大家都变成了怪物，然后爱音一个个攻略过去的故事。想着是要写温情的恐怖故事，就是不知道能不能写出来。我尽力好吧。   2#1自从那件事情以后，整个世界都变了。所有人都变得好坏好坏，包括自己的爸爸妈妈。所以千早爱音把自己关到卧室里，不敢出门，不敢上学，等听到自己的爸爸妈妈出门以后，才敢偷偷打开房间的门，在家里找一些食物吃。就这样过了一年，千早爱音在自己的卧室呆了整整一年，没有和任何人交流过一句话。这一年间，千早爱音生活在恐惧里，她总害怕自己的卧室房门突然被其他人打开，她害怕外面的整个世界。因为恐惧，她一刻不停的在网络上学习各种生存技巧，一刻不停地用家里的材料制作各种武器，并且学习掌握他们。方便在绝望的处境中，千早爱音能最快速地处决自己。 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/02/11/25-02-11-mygoxingnu/" title="Mujica众人成了mygo的星怒"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover_08.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mujica众人成了mygo的星怒"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/02/11/25-02-11-mygoxingnu/" title="Mujica众人成了mygo的星怒">Mujica众人成了mygo的星怒</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-11T14:06:53.000Z" title="发表于 2025-02-11 22:06:53">2025-02-11</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B7%B2%E5%AE%8C%E7%BB%93/">已完结</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%98%9F%E6%80%92/">星怒</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2025/02/11/25-02-11-mygoxingnu/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">东山公曰:名著了属于是。  Mujica众人成了mygo的星怒作者:尸超绊 1第二季结束后，Mujica由于对邦失败，永远地成为了mygo的努利。现在的当务之急是如何处置这些妇孺？   2假如按人头分配，五个人正好一人一只，应该是比较公平的决定。但以爱音的个性而言，她更想看协奏曲，所有人黏糊糊搅在一起的大音趴。为此她向素世使了个眼色，对方却装作没懂，拍手笑道：“啊，ano酱已经迫不及待了呢，那我们赶紧开始分配吧！我想要……”   3结果，在素世先声夺人之下，大家的白月光祥子成了她的盘中餐。爱音固然有些沮丧，但想到不抓紧的话猎物就会被抢走，很快选定了看起来相当美味的初华。   4对初华来说，除了祥子，被谁俘虏都是一样的。不过，鉴于爱素的绯闻多人气高，在历次扫黄中总是第一个被抓的，所以，或许能通过这层关系得知祥子的后话；甚至能再次相会也说不定，虽然那大约是相当凄惨的场面就是了。于是她抱定宗旨，用心服侍爱音，好从她嘴里撬出更多信息来。 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/02/11/25-02-11-canche/" title="若叶睦的移动餐车"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover_02.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="若叶睦的移动餐车"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/02/11/25-02-11-canche/" title="若叶睦的移动餐车">若叶睦的移动餐车</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-11T14:03:27.000Z" title="发表于 2025-02-11 22:03:27">2025-02-11</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B7%B2%E5%AE%8C%E7%BB%93/">已完结</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%A7%80%E8%89%B2/">秀色</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2025/02/11/25-02-11-canche/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">东山公曰:这在74老师的文里面算纯良了  若叶睦的移动餐车作者:第七十四点已知 1警告：疯癫之作慎入😨轻度g向，秀色，扭曲，ooc  ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2025/02/11/25-02-11-songzang/" title="送葬的椎名立希"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover_03.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="送葬的椎名立希"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/02/11/25-02-11-songzang/" title="送葬的椎名立希">送葬的椎名立希</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-11T13:59:50.000Z" title="发表于 2025-02-11 21:59:50">2025-02-11</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%86%B0%E6%81%8B/">冰恋</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2025/02/11/25-02-11-songzang/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">东山曰:好像是第一篇冰恋  送葬的椎名立希作者:丰孩子 1亖人、冰恋、ooc警告会出现奇怪的世界观和雷点，如果踩了雷，就请尽情殴打作者迷途者们寻找自我的无病呻吟，还望搏君一笑   2高松灯死后第七天，椎名特种葬仪社在池袋西口开业。因为微型黑洞离开了地球，这个世界失去了一个锚定点，曾经普通与理所当然的现实遭到了动摇。小到自动贩卖机会随机吐出企鹅创可贴，大到夜空中仙后星座不再闪烁，但对于多数人来说，前者对日常的改变似乎比后者更大。而椎名特种葬仪社开业的原因是，在这个被改变的世界里，人类间的同性性行为将会导致双方死亡。 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2025/02/11/25-02-11-yuye/" title="雨夜的某种可能性"><img class="post-bg" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover_02.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="雨夜的某种可能性"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/02/11/25-02-11-yuye/" title="雨夜的某种可能性">雨夜的某种可能性</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-11T13:55:38.000Z" title="发表于 2025-02-11 21:55:38">2025-02-11</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B8%8C%E7%A5%A5/">希祥</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2025/02/11/25-02-11-yuye/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">雨夜的某种可能性 作者:飞舞哈基人 1新春了，写点温馨的东西鉴于mujica还没播完，干脆设定成了小祥没有打算组建mujica的世界——ooc注意——失去了音乐的丰川祥子，在某个雨夜，与椎名立希重逢了。 ...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/4/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#content-inner">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#content-inner">12</a><a class="extend next" rel="next" href="/page/6/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/favicon01.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">东山燃灯寺</div><div class="author-info-description">关注东山燃灯寺谢谢喵~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">112</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">81</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/296330875?spm_id_from=333.1007.0.0"><i class="fa fa-heart"></i><span>米奇妙妙屋~</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://tieba.baidu.com/f?kw=%E9%82%A6%E5%A4%9A%E5%88%A9%E6%80%80%E5%AD%95&amp;fr=index" target="_blank" title="Website"><i class="fab fa-website"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到邦多礼庇护所BDS(BanDori Shelter)<br>本网站将会陆续收录邦多礼怀孕吧的部分作品<br>当然是根据点赞数和我喜欢的来啦~<br>ps:评论区的邮箱仅为读取头像信息（也就是说你随便乱填都没问题）<br>欢迎加入官方QQ群参与讨论：567786491</div></div><div class="sticky_layout"><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%82%B2%E4%BC%A4/" style="font-size: 1.1em; color: #999">悲伤</a> <a href="/tags/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81%E4%BA%8C%E5%88%9B/" style="font-size: 1.1em; color: #999">文学作品二创</a> <a href="/tags/%E4%BB%BB%E7%B4%AB%E5%AE%89%E9%81%93%E6%B6%88/" style="font-size: 1.1em; color: #999">任紫安道消</a> <a href="/tags/%E7%BC%9D%E5%90%88%E4%B8%96%E7%95%8C%E8%A7%82/" style="font-size: 1.1em; color: #999">缝合世界观</a> <a href="/tags/%E7%9D%A6%E7%A5%A5/" style="font-size: 1.1em; color: #999">睦祥</a> <a href="/tags/%E6%90%9E%E7%AC%91/" style="font-size: 1.1em; color: #999">搞笑</a> <a href="/tags/%E8%A1%80%E5%8D%81%E5%AD%97/" style="font-size: 1.1em; color: #999">血十字</a> <a href="/tags/NTR/" style="font-size: 1.26em; color: #999fa8">NTR</a> <a href="/tags/%E6%82%AC%E7%96%91/" style="font-size: 1.1em; color: #999">悬疑</a> <a href="/tags/%E5%A4%AA%E7%9B%91/" style="font-size: 1.5em; color: #99a9bf">太监</a> <a href="/tags/%E5%B8%8C%E7%A5%A5/" style="font-size: 1.18em; color: #999ca1">希祥</a> <a href="/tags/futa/" style="font-size: 1.18em; color: #999ca1">futa</a> <a href="/tags/%E4%BC%AA%E4%BA%BA/" style="font-size: 1.18em; color: #999ca1">伪人</a> <a href="/tags/%E7%BA%AF%E8%89%AF%E6%9D%AF/" style="font-size: 1.1em; color: #999">纯良杯</a> <a href="/tags/%E7%A5%A5%E5%8F%A0%E6%80%A7%E8%BD%AC/" style="font-size: 1.1em; color: #999">祥叠性转</a> <a href="/tags/%E9%9B%86%E5%AE%89/" style="font-size: 1.1em; color: #999">集安</a> <a href="/tags/%E7%97%85%E5%A8%87/" style="font-size: 1.1em; color: #999">病娇</a> <a href="/tags/%E5%85%8B%E8%8B%8F%E9%B2%81/" style="font-size: 1.18em; color: #999ca1">克苏鲁</a> <a href="/tags/%E9%95%BF%E5%B4%8E%E7%B4%A0%E4%B8%96/" style="font-size: 1.1em; color: #999">长崎素世</a> <a href="/tags/%E9%BB%84%E9%9B%AF/" style="font-size: 1.5em; color: #99a9bf">黄雯</a> <a href="/tags/%E7%95%A5%E7%9D%A6/" style="font-size: 1.1em; color: #999">略睦</a> <a href="/tags/%E7%88%B1%E5%B8%8C/" style="font-size: 1.1em; color: #999">爱希</a> <a href="/tags/%E7%88%B10/" style="font-size: 1.1em; color: #999">爱0</a> <a href="/tags/%E6%9C%AA%E5%AE%8C%E7%BB%93/" style="font-size: 1.1em; color: #999">未完结</a> <a href="/tags/%E5%94%AF%E7%BE%8E/" style="font-size: 1.26em; color: #999fa8">唯美</a> <a href="/tags/%E7%88%B1%E6%B5%B7/" style="font-size: 1.1em; color: #999">爱海</a> <a href="/tags/%E5%B9%BD%E7%81%B5%E9%B2%A8/" style="font-size: 1.1em; color: #999">幽灵鲨</a> <a href="/tags/%E7%BE%8E%E9%A3%9F/" style="font-size: 1.1em; color: #999">美食</a> <a href="/tags/%E8%83%83%E7%97%9B/" style="font-size: 1.1em; color: #999">胃痛</a> <a href="/tags/%E8%99%90%E5%BE%85/" style="font-size: 1.1em; color: #999">虐待</a> <a href="/tags/80/" style="font-size: 1.1em; color: #999">80</a> <a href="/tags/%E9%AB%98%E6%9D%BE%E7%81%AF/" style="font-size: 1.1em; color: #999">高松灯</a> <a href="/tags/%E7%88%B1all/" style="font-size: 1.34em; color: #99a3b0">爱all</a> <a href="/tags/%E5%A5%B4%E5%BD%B9/" style="font-size: 1.42em; color: #99a6b7">奴役</a> <a href="/tags/%E9%AD%85%E9%AD%94/" style="font-size: 1.1em; color: #999">魅魔</a> <a href="/tags/%E5%87%BA%E7%94%9F/" style="font-size: 1.18em; color: #999ca1">出生</a> <a href="/tags/%E7%BA%AF%E7%88%B1%EF%BC%88/" style="font-size: 1.1em; color: #999">纯爱（</a> <a href="/tags/%E8%A1%A5%E6%A1%A3/" style="font-size: 1.26em; color: #999fa8">补档</a> <a href="/tags/%E8%AE%BA%E5%89%91/" style="font-size: 1.18em; color: #999ca1">论剑</a> <a href="/tags/%E9%8A%AE%E5%9B%B5/" style="font-size: 1.18em; color: #999ca1">銮囵</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/07/">
+          <span class="card-archive-list-date">七月 2025</span>
+          <span class="card-archive-list-count">9</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/05/">
+          <span class="card-archive-list-date">五月 2025</span>
+          <span class="card-archive-list-count">6</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/03/">
+          <span class="card-archive-list-date">三月 2025</span>
+          <span class="card-archive-list-count">9</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/02/">
+          <span class="card-archive-list-date">二月 2025</span>
+          <span class="card-archive-list-count">43</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/01/">
+          <span class="card-archive-list-date">一月 2025</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/12/">
+          <span class="card-archive-list-date">十二月 2024</span>
+          <span class="card-archive-list-count">8</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/11/">
+          <span class="card-archive-list-date">十一月 2024</span>
+          <span class="card-archive-list-count">36</span>
+        </a>
+      </li>
+    </ul></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 东山燃灯寺</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => { 
+  const getCommentUrl = () => {
+    const eleGroup = document.querySelectorAll('#recent-posts .article-title')
+    let urlArray = []
+    eleGroup.forEach(i=>{
+      urlArray.push(i.getAttribute('href'))
+    })
+    return urlArray
+  }
+
+  const getCount = () => {
+    const runTwikoo = () => {
+      twikoo.getCommentsCount({
+        envId: 'https://www.yunbatwikoo.fun/',
+        region: '',
+        urls: getCommentUrl(),
+        includeReply: false
+      }).then(function (res) {
+        document.querySelectorAll('#recent-posts .twikoo-count').forEach((item,index) => {
+          item.textContent = res[index].count
+        })
+      }).catch(function (err) {
+        console.log(err)
+      })
+    }
+
+      if (typeof twikoo === 'object') {
+        runTwikoo()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+      }
+  }
+
+  window.pjax ? getCount() : window.addEventListener('load', getCount)
+
+})()</script><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = []
+        sub.unshift(data.hitokoto, from)
+        typedJSFn.init(sub)
+      } else {
+        document.getElementById('subtitle').textContent = data.hitokoto
+      }
+    })
+}
+typedJSFn.run(subtitleType)
+</script></div><script defer data-pjax src="/js/readPercent.js"></script><script defer data-pjax src="/js/emoji.js"></script><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script defer="defer" id="fluttering_ribbon" mobile="enable" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":2,"hHeadPos":0.4,"vHeadPos":0.618,"jsonPath":"live2d_models/model.json"},"display":{"superSample":2,"width":300,"height":600,"position":"right","hOffset":50,"vOffset":-50},"mobile":{"show":false,"scale":0.8,"hOffset":50,"vOffset":-80},"react":{"opacityDefault":0.5,"opacityOnHover":0.2},"log":false});</script></body></html>

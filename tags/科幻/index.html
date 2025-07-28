@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>标签: 科幻 | 邦多礼庇护所</title><meta name="author" content="东山燃灯寺"><meta name="copyright" content="东山燃灯寺"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一个收录各种神奇作品的网站">
+<meta property="og:type" content="website">
+<meta property="og:title" content="邦多礼庇护所">
+<meta property="og:url" content="http://yunba.icu/tags/%E7%A7%91%E5%B9%BB/index.html">
+<meta property="og:site_name" content="邦多礼庇护所">
+<meta property="og:description" content="一个收录各种神奇作品的网站">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yunba.icu/img/favicon01.png">
+<meta property="article:author" content="东山燃灯寺">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yunba.icu/img/favicon01.png"><link rel="shortcut icon" href="/img/favicon01.png"><link rel="canonical" href="http://yunba.icu/tags/%E7%A7%91%E5%B9%BB/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '标签: 科幻',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><link rel="stylesheet" href="/css/readPercent.css"><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/universe.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(img/background_01.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/favicon01.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">112</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">81</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/admin/"><i class="fa-fw fas fa-sign-in-alt"></i><span> 登录</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comment"></i><span> 评论</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">邦多礼庇护所</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/admin/"><i class="fa-fw fas fa-sign-in-alt"></i><span> 登录</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comment"></i><span> 评论</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">科幻</h1></div></header><main class="layout" id="content-inner"><div id="tag"><div class="article-sort-title">标签 - 科幻</div><div class="article-sort"><div class="article-sort-item year">2024</div><div class="article-sort-item"><a class="article-sort-item-img" href="/2024/12/19/12-19-2024-12-19-page/" title="为什么要爱千早爱音"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/default_cover_01.png" alt="为什么要爱千早爱音" onerror="this.onerror=null;this.src='/img/404.jpg'"></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2024-12-19T12:19:09.000Z" title="发表于 2024-12-19 20:19:09">2024-12-19</time></div><a class="article-sort-item-title" href="/2024/12/19/12-19-2024-12-19-page/" title="为什么要爱千早爱音">为什么要爱千早爱音</a></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/favicon01.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">东山燃灯寺</div><div class="author-info-description">关注东山燃灯寺谢谢喵~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">112</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">81</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/296330875?spm_id_from=333.1007.0.0"><i class="fa fa-heart"></i><span>米奇妙妙屋~</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://tieba.baidu.com/f?kw=%E9%82%A6%E5%A4%9A%E5%88%A9%E6%80%80%E5%AD%95&amp;fr=index" target="_blank" title="Website"><i class="fab fa-website"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到邦多礼庇护所BDS(BanDori Shelter)<br>本网站将会陆续收录邦多礼怀孕吧的部分作品<br>当然是根据点赞数和我喜欢的来啦~<br>ps:评论区的邮箱仅为读取头像信息（也就是说你随便乱填都没问题）<br>欢迎加入官方QQ群参与讨论：567786491</div></div><div class="sticky_layout"><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%82%B2%E4%BC%A4/" style="font-size: 1.1em; color: #999">悲伤</a> <a href="/tags/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81%E4%BA%8C%E5%88%9B/" style="font-size: 1.1em; color: #999">文学作品二创</a> <a href="/tags/%E4%BB%BB%E7%B4%AB%E5%AE%89%E9%81%93%E6%B6%88/" style="font-size: 1.1em; color: #999">任紫安道消</a> <a href="/tags/%E7%BC%9D%E5%90%88%E4%B8%96%E7%95%8C%E8%A7%82/" style="font-size: 1.1em; color: #999">缝合世界观</a> <a href="/tags/%E7%9D%A6%E7%A5%A5/" style="font-size: 1.1em; color: #999">睦祥</a> <a href="/tags/%E6%90%9E%E7%AC%91/" style="font-size: 1.1em; color: #999">搞笑</a> <a href="/tags/%E8%A1%80%E5%8D%81%E5%AD%97/" style="font-size: 1.1em; color: #999">血十字</a> <a href="/tags/NTR/" style="font-size: 1.26em; color: #999fa8">NTR</a> <a href="/tags/%E6%82%AC%E7%96%91/" style="font-size: 1.1em; color: #999">悬疑</a> <a href="/tags/%E5%A4%AA%E7%9B%91/" style="font-size: 1.5em; color: #99a9bf">太监</a> <a href="/tags/%E5%B8%8C%E7%A5%A5/" style="font-size: 1.18em; color: #999ca1">希祥</a> <a href="/tags/futa/" style="font-size: 1.18em; color: #999ca1">futa</a> <a href="/tags/%E4%BC%AA%E4%BA%BA/" style="font-size: 1.18em; color: #999ca1">伪人</a> <a href="/tags/%E7%BA%AF%E8%89%AF%E6%9D%AF/" style="font-size: 1.1em; color: #999">纯良杯</a> <a href="/tags/%E7%A5%A5%E5%8F%A0%E6%80%A7%E8%BD%AC/" style="font-size: 1.1em; color: #999">祥叠性转</a> <a href="/tags/%E9%9B%86%E5%AE%89/" style="font-size: 1.1em; color: #999">集安</a> <a href="/tags/%E7%97%85%E5%A8%87/" style="font-size: 1.1em; color: #999">病娇</a> <a href="/tags/%E5%85%8B%E8%8B%8F%E9%B2%81/" style="font-size: 1.18em; color: #999ca1">克苏鲁</a> <a href="/tags/%E9%95%BF%E5%B4%8E%E7%B4%A0%E4%B8%96/" style="font-size: 1.1em; color: #999">长崎素世</a> <a href="/tags/%E9%BB%84%E9%9B%AF/" style="font-size: 1.5em; color: #99a9bf">黄雯</a> <a href="/tags/%E7%95%A5%E7%9D%A6/" style="font-size: 1.1em; color: #999">略睦</a> <a href="/tags/%E7%88%B1%E5%B8%8C/" style="font-size: 1.1em; color: #999">爱希</a> <a href="/tags/%E7%88%B10/" style="font-size: 1.1em; color: #999">爱0</a> <a href="/tags/%E6%9C%AA%E5%AE%8C%E7%BB%93/" style="font-size: 1.1em; color: #999">未完结</a> <a href="/tags/%E5%94%AF%E7%BE%8E/" style="font-size: 1.26em; color: #999fa8">唯美</a> <a href="/tags/%E7%88%B1%E6%B5%B7/" style="font-size: 1.1em; color: #999">爱海</a> <a href="/tags/%E5%B9%BD%E7%81%B5%E9%B2%A8/" style="font-size: 1.1em; color: #999">幽灵鲨</a> <a href="/tags/%E7%BE%8E%E9%A3%9F/" style="font-size: 1.1em; color: #999">美食</a> <a href="/tags/%E8%83%83%E7%97%9B/" style="font-size: 1.1em; color: #999">胃痛</a> <a href="/tags/%E8%99%90%E5%BE%85/" style="font-size: 1.1em; color: #999">虐待</a> <a href="/tags/80/" style="font-size: 1.1em; color: #999">80</a> <a href="/tags/%E9%AB%98%E6%9D%BE%E7%81%AF/" style="font-size: 1.1em; color: #999">高松灯</a> <a href="/tags/%E7%88%B1all/" style="font-size: 1.34em; color: #99a3b0">爱all</a> <a href="/tags/%E5%A5%B4%E5%BD%B9/" style="font-size: 1.42em; color: #99a6b7">奴役</a> <a href="/tags/%E9%AD%85%E9%AD%94/" style="font-size: 1.1em; color: #999">魅魔</a> <a href="/tags/%E5%87%BA%E7%94%9F/" style="font-size: 1.18em; color: #999ca1">出生</a> <a href="/tags/%E7%BA%AF%E7%88%B1%EF%BC%88/" style="font-size: 1.1em; color: #999">纯爱（</a> <a href="/tags/%E8%A1%A5%E6%A1%A3/" style="font-size: 1.26em; color: #999fa8">补档</a> <a href="/tags/%E8%AE%BA%E5%89%91/" style="font-size: 1.18em; color: #999ca1">论剑</a> <a href="/tags/%E9%8A%AE%E5%9B%B5/" style="font-size: 1.18em; color: #999ca1">銮囵</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/07/">
+          <span class="card-archive-list-date">七月 2025</span>
+          <span class="card-archive-list-count">9</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/05/">
+          <span class="card-archive-list-date">五月 2025</span>
+          <span class="card-archive-list-count">6</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/03/">
+          <span class="card-archive-list-date">三月 2025</span>
+          <span class="card-archive-list-count">9</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/02/">
+          <span class="card-archive-list-date">二月 2025</span>
+          <span class="card-archive-list-count">43</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/01/">
+          <span class="card-archive-list-date">一月 2025</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/12/">
+          <span class="card-archive-list-date">十二月 2024</span>
+          <span class="card-archive-list-count">8</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/11/">
+          <span class="card-archive-list-date">十一月 2024</span>
+          <span class="card-archive-list-count">36</span>
+        </a>
+      </li>
+    </ul></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 东山燃灯寺</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"></div><script defer data-pjax src="/js/readPercent.js"></script><script defer data-pjax src="/js/emoji.js"></script><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script defer="defer" id="fluttering_ribbon" mobile="enable" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":2,"hHeadPos":0.4,"vHeadPos":0.618,"jsonPath":"live2d_models/model.json"},"display":{"superSample":2,"width":300,"height":600,"position":"right","hOffset":50,"vOffset":-50},"mobile":{"show":false,"scale":0.8,"hOffset":50,"vOffset":-80},"react":{"opacityDefault":0.5,"opacityOnHover":0.2},"log":false});</script></body></html>

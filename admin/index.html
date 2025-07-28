@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/img/favicon01.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>欢迎登陆邦多礼庇护所！</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- 引入 Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 20px;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            transition: transform 0.3s ease;
+            position: relative;
+            top: -80px;
+        }
+
+        .login-container:hover {
+            transform: translateY(-5px);
+        }
+
+        .branding {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #2a5298;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: none;
+            border: none;
+            color: #2a5298;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: #1e3c72;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            color: #2a5298;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 480px) {
+            /*.login-container {*/
+            /*    padding: 20px;*/
+            /*    top: 0; !* 取消上移 *!*/
+            /*    max-width: 90%; !* 增加宽度限制 *!*/
+            /*}*/
+            .login-container {
+                display: none; /* 在小屏幕上隐藏 */
+            }
+
+            .logo {
+                width: 50px;
+                height: 50px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            .back-button {
+                font-size: 18px;
+                top: 10px;
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <!-- 返回按钮 -->
+    <button class="back-button" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+    <div class="branding">
+        <img src="/img/favicon01.png" alt="邦多礼徽标" class="logo">
+        <h1>邦多礼庇护所</h1>
+        <p>他们的过去是一杯腐茶，</p>
+        <p>不能打开。不能相认。不能说话。</p>
+    </div>
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+
+    <div class="loading">加载中...</div>
+</div>
+
+<script>
+    // 添加加载状态
+    document.addEventListener('DOMContentLoaded', () => {
+        const loading = document.querySelector('.loading');
+        const widget = document.querySelector('.netlify-identity-widget');
+
+        if(widget) {
+            widget.style.display = 'none';
+            loading.style.display = 'block';
+
+            setTimeout(() => {
+                widget.style.display = 'block';
+                loading.style.display = 'none';
+            }, 1000);
+        }
+    });
+
+    function goBack() {
+        window.location.href = '/';
+    }
+</script>
+</body>
+</html>

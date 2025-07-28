@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  repo: KonshinHaoshin/KonshinHaoshin.github.io
+  branch: main  # 根据仓库主分支名称调整
+  base_url: https://www.yunba.icu/
+media_folder: "source/images/uploads"  # 图片存储路径
+public_folder: "/images/uploads"       # 图片访问路径
+collections:
+  - name: "posts"
+    label: "文章"
+    folder: "source/_posts"            # Hexo 文章目录
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "发布日期", name: "date", widget: "datetime" }
+      - { label: "标签", name: "tags", widget: "list" }
+      - { label: "作者",name: "copyright_author", widget: "string"}
+      - { label: "正文", name: "body", widget: "markdown" }
