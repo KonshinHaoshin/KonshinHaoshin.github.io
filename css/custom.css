@@ -10,9 +10,9 @@
 #footer::before {
     background: transparent !important;
 }
-/*#page-header::before {*/
-/*    background: transparent !important;*/
-/*}*/
+#page-header::before {
+    background: transparent !important;
+}
 
 /* 夜间模式遮罩透明 */
 [data-theme="dark"] #footer::before {
