@@ -1,0 +1,53 @@
+
+
+function getPostId() {
+	var _url = window.location.href;
+	var _i = _url.indexOf('post') + 5;
+	var _permalink = _url.substring(_i);
+
+	if(!_permalink) return;
+	var _idMap = {};
+	var _index = _permalink.indexOf('_');
+	if(_index>0 && _index<_permalink.length){
+		try{
+			_idMap.blogId = parseInt(_permalink.substring(0,_index),16);
+			_idMap.postId = parseInt(_permalink.substring(_index+1,_permalink.length),16);
+		} catch(e){}
+		
+	}
+	
+	return _idMap.postId;
+}
+
+
+$(document).ready(function (){
+	
+	window.addEventListener('message',function(event) {
+		__userIdCrossDomain = parseInt(event.data);
+
+		$('.video .img').mousedown(function(){
+			_s0 = '_trackEvent';
+			_s1 = 'web和wap所有页面';
+			_s2 = 'VIEW_ALLVIDEO';
+			_s3 = 'article';
+
+			var _postId = getPostId();
+			var _daPara = {
+				'userid': __userIdCrossDomain,
+				'itemid': _postId,
+				'itemid2': null,
+				'itemtype2': null,
+				'actiontype': 'VIEW_VIDEO',
+				'Recommend_business_name': null,
+				'Recommend_scene_name': null,
+				'actionTime': null
+			};
+
+			_s3 = _s3 + '###' + JSON.stringify(_daPara);
+
+			window['_gaq'].push([_s0,_s1,_s2,_s3]);
+			window['_gaq'].push(['_set', 'hitCallback',null]);
+		});
+	});
+
+});

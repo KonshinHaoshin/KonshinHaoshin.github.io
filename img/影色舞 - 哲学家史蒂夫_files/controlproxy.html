@@ -1,0 +1,345 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>邦多礼庇护所 | 邦多礼庇护所</title><meta name="author" content="东山燃灯寺"><meta name="copyright" content="东山燃灯寺"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="proxy  (function(){ try{     var dimension &#x3D; location.hash.replace(&#x2F;#?dimension&#x3D;&#x2F;, &#39;&#39;).split(&#39;,&#39;),         matchArr &#x3D; location.search.match(&#x2F;(\?|&amp;)iframe&#x3D;(.*)(&amp;|#|$)&#x2F;),         iframeId &#x3D; matchArr">
+<meta property="og:type" content="website">
+<meta property="og:title" content="邦多礼庇护所">
+<meta property="og:url" content="http://yunba.icu/img/%E5%BD%B1%E8%89%B2%E8%88%9E%20-%20%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%8F%B2%E8%92%82%E5%A4%AB_files/controlproxy.html">
+<meta property="og:site_name" content="邦多礼庇护所">
+<meta property="og:description" content="proxy  (function(){ try{     var dimension &#x3D; location.hash.replace(&#x2F;#?dimension&#x3D;&#x2F;, &#39;&#39;).split(&#39;,&#39;),         matchArr &#x3D; location.search.match(&#x2F;(\?|&amp;)iframe&#x3D;(.*)(&amp;|#|$)&#x2F;),         iframeId &#x3D; matchArr">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yunba.icu/img/default_cover_13.png">
+<meta property="article:published_time" content="2025-07-31T13:14:46.087Z">
+<meta property="article:modified_time" content="2025-07-31T13:14:46.087Z">
+<meta property="article:author" content="东山燃灯寺">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yunba.icu/img/default_cover_13.png"><link rel="shortcut icon" href="/img/favicon01.png"><link rel="canonical" href="http://yunba.icu/img/%E5%BD%B1%E8%89%B2%E8%88%9E%20-%20%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%8F%B2%E8%92%82%E5%A4%AB_files/controlproxy.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '邦多礼庇护所',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  isShuoshuo: false
+}</script><link rel="stylesheet" href="/css/readPercent.css"><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/universe.css"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><script> var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?400917ecddaad4063ab27704f55c2796"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })(); </script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(/img/background_01.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/favicon01.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">125</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">84</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comment"></i><span> 评论</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">邦多礼庇护所</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-comment"></i><span> 评论</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title"></h1></div></header><main class="layout" id="content-inner"><div id="page"><div class="container" id="article-container"><!DOCTYPE html>
+<!-- saved from url=(0070)https://zhexuejiashidifu.lofter.com/controlproxy.html#dimension=425,32 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>proxy</title>
+<script>
+(function(){
+try{
+    var dimension = location.hash.replace(/#?dimension=/, '').split(','),
+        matchArr = location.search.match(/(\?|&)iframe=(.*)(&|#|$)/),
+        iframeId = matchArr && matchArr[2] || 'control_frame',
+        iframe = parent.parent.document.getElementById(iframeId);
+    if(location.hash.indexOf("#dimension=") == -1){
+        iframe.setAttribute('width', '100%');
+        iframe.setAttribute('height', '100%');
+        iframe.width =  '100%';
+        iframe.height =  '100%';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+    }else{
+        iframe.setAttribute('width', dimension[0] + 'px');
+        iframe.setAttribute('height', dimension[1] + 'px');
+        iframe.width =  dimension[0] + 'px';
+        iframe.height =  dimension[1] + 'px';
+        iframe.style.width = dimension[0] + 'px';
+        iframe.style.height = dimension[1] + 'px';
+    }
+
+}catch(ex){}
+})();
+</script>
+</head>
+<body>
+
+</body></html></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/favicon01.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">东山燃灯寺</div><div class="author-info-description">关注东山燃灯寺谢谢喵~</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">125</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">84</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/296330875?spm_id_from=333.1007.0.0"><i class="fa fa-heart"></i><span>米奇妙妙屋~</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://tieba.baidu.com/f?kw=%E9%82%A6%E5%A4%9A%E5%88%A9%E6%80%80%E5%AD%95&amp;fr=index" target="_blank" title="Website"><i class="fab fa-website"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到邦多礼庇护所BDS(BanDori Shelter)<br>本网站将会陆续收录邦多礼怀孕吧的部分作品<br>当然是根据点赞数和我喜欢的来啦~<br>ps:评论区的邮箱仅为读取头像信息（也就是说你随便乱填都没问题）<br>欢迎加入官方QQ群参与讨论：567786491</div></div><div class="sticky_layout"><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%89%B6%E5%A5%B9/" style="font-size: 1.34em; color: #99a3b0">扶她</a> <a href="/tags/%E7%BA%AF%E8%89%AF%E6%9D%AF/" style="font-size: 1.1em; color: #999">纯良杯</a> <a href="/tags/%E5%A4%AA%E7%9B%91/" style="font-size: 1.5em; color: #99a9bf">太监</a> <a href="/tags/%E7%88%B1%E5%B8%8C/" style="font-size: 1.1em; color: #999">爱希</a> <a href="/tags/%E7%88%B1%E6%B5%B7/" style="font-size: 1.1em; color: #999">爱海</a> <a href="/tags/%E6%90%9E%E7%AC%91/" style="font-size: 1.1em; color: #999">搞笑</a> <a href="/tags/%E7%88%B10/" style="font-size: 1.1em; color: #999">爱0</a> <a href="/tags/%E6%88%91%E4%B8%8D%E7%9F%A5%E9%81%93%E8%AF%A5%E6%94%BE%E4%BB%80%E4%B9%88tag%E4%BD%86%E6%98%AF%E8%B0%A8%E6%85%8E%E8%A7%82%E7%9C%8B/" style="font-size: 1.18em; color: #999ca1">我不知道该放什么tag但是谨慎观看</a> <a href="/tags/%E5%94%AF%E7%BE%8E/" style="font-size: 1.26em; color: #999fa8">唯美</a> <a href="/tags/%E5%AE%B6%E6%9A%B4/" style="font-size: 1.1em; color: #999">家暴</a> <a href="/tags/%E7%95%A5%E7%9D%A6/" style="font-size: 1.1em; color: #999">略睦</a> <a href="/tags/%E7%AB%99%E8%A1%97/" style="font-size: 1.26em; color: #999fa8">站街</a> <a href="/tags/%E7%A7%80%E8%89%B2/" style="font-size: 1.26em; color: #999fa8">秀色</a> <a href="/tags/%E5%A4%8F%E5%A4%9C%E8%8D%92%E5%87%89/" style="font-size: 1.42em; color: #99a6b7">夏夜荒凉</a> <a href="/tags/%E7%95%A5%E7%88%B1%E5%8C%BA/" style="font-size: 1.1em; color: #999">略爱区</a> <a href="/tags/%E7%81%AF%E7%A5%A5/" style="font-size: 1.1em; color: #999">灯祥</a> <a href="/tags/%E6%8A%95%E7%A8%BF/" style="font-size: 1.18em; color: #999ca1">投稿</a> <a href="/tags/%E8%A1%A5%E6%A1%A3/" style="font-size: 1.26em; color: #999fa8">补档</a> <a href="/tags/%E7%B4%A0%E7%81%AF/" style="font-size: 1.1em; color: #999">素灯</a> <a href="/tags/%E7%88%B1%E9%9F%B3%E9%80%80%E9%98%9F%E6%B5%81/" style="font-size: 1.1em; color: #999">爱音退队流</a> <a href="/tags/%E6%AC%A2%E4%B9%90%E5%90%91/" style="font-size: 1.1em; color: #999">欢乐向</a> <a href="/tags/%E7%BC%9D%E5%90%88%E4%B8%96%E7%95%8C%E8%A7%82/" style="font-size: 1.1em; color: #999">缝合世界观</a> <a href="/tags/%E8%99%90%E5%BE%85/" style="font-size: 1.1em; color: #999">虐待</a> <a href="/tags/%E8%BF%9E%E8%BD%BD%E4%B8%AD/" style="font-size: 1.18em; color: #999ca1">连载中</a> <a href="/tags/%E5%86%B0%E6%81%8B/" style="font-size: 1.18em; color: #999ca1">冰恋</a> <a href="/tags/%E7%BA%AF%E7%88%B1%EF%BC%88/" style="font-size: 1.1em; color: #999">纯爱（</a> <a href="/tags/CP%E4%B9%B1%E7%82%96/" style="font-size: 1.18em; color: #999ca1">CP乱炖</a> <a href="/tags/%E6%80%80%E5%AD%95/" style="font-size: 1.18em; color: #999ca1">怀孕</a> <a href="/tags/%E6%96%87%E5%AD%A6%E4%BD%9C%E5%93%81%E4%BA%8C%E5%88%9B/" style="font-size: 1.1em; color: #999">文学作品二创</a> <a href="/tags/futa/" style="font-size: 1.18em; color: #999ca1">futa</a> <a href="/tags/%E7%8C%AB%E5%B8%8C/" style="font-size: 1.1em; color: #999">猫希</a> <a href="/tags/%E5%85%8B%E8%8B%8F%E9%B2%81/" style="font-size: 1.18em; color: #999ca1">克苏鲁</a> <a href="/tags/NTR/" style="font-size: 1.26em; color: #999fa8">NTR</a> <a href="/tags/%E7%A7%91%E5%B9%BB/" style="font-size: 1.1em; color: #999">科幻</a> <a href="/tags/80/" style="font-size: 1.1em; color: #999">80</a> <a href="/tags/%E5%88%9D%E7%A5%A5/" style="font-size: 1.18em; color: #999ca1">初祥</a> <a href="/tags/%E8%A1%80%E5%8D%81%E5%AD%97/" style="font-size: 1.1em; color: #999">血十字</a> <a href="/tags/%E7%88%B1%E7%B4%A0/" style="font-size: 1.34em; color: #99a3b0">爱素</a> <a href="/tags/%E6%82%B2%E4%BC%A4/" style="font-size: 1.1em; color: #999">悲伤</a> <a href="/tags/%E5%AE%89%E7%A7%91/" style="font-size: 1.1em; color: #999">安科</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+    <ul class="card-archive-list">
+  
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/11/">
+          <span class="card-archive-list-date">十一月 2025</span>
+          <span class="card-archive-list-count">4</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/07/">
+          <span class="card-archive-list-date">七月 2025</span>
+          <span class="card-archive-list-count">18</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/05/">
+          <span class="card-archive-list-date">五月 2025</span>
+          <span class="card-archive-list-count">6</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/03/">
+          <span class="card-archive-list-date">三月 2025</span>
+          <span class="card-archive-list-count">9</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/02/">
+          <span class="card-archive-list-date">二月 2025</span>
+          <span class="card-archive-list-count">43</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2025/01/">
+          <span class="card-archive-list-date">一月 2025</span>
+          <span class="card-archive-list-count">1</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/12/">
+          <span class="card-archive-list-date">十二月 2024</span>
+          <span class="card-archive-list-count">8</span>
+        </a>
+      </li>
+    
+      <li class="card-archive-list-item">
+        <a class="card-archive-list-link" href="/archives/2024/11/">
+          <span class="card-archive-list-date">十一月 2024</span>
+          <span class="card-archive-list-count">36</span>
+        </a>
+      </li>
+    </ul></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By 东山燃灯寺</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://www.yunbatwikoo.fun/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'https://www.yunbatwikoo.fun/',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script defer data-pjax src="/js/readPercent.js"></script><script defer data-pjax src="/js/emoji.js"></script><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (location.pathname === '/' || location.pathname === '/index.html') {
+      Swal.fire({
+        title: '🎉 欢迎访问邦多礼庇护所！',
+        html: `
+          <p>欢迎加入官方QQ群参与讨论：</p>
+          <p style="font-weight:bold; font-size:18px;">567786491</p>
+          <p><i>来人陪我聊天求你们了 🙏</i></p>
+        `,
+        icon: 'success',
+        confirmButtonText: '关闭',
+        confirmButtonColor: '#3085d6',
+      });
+    }
+  });
+</script>
+<script defer="defer" id="fluttering_ribbon" mobile="enable" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":2,"hHeadPos":0.4,"vHeadPos":0.618,"jsonPath":"live2d_models/model.json"},"display":{"superSample":2,"width":300,"height":600,"position":"right","hOffset":50,"vOffset":-50},"mobile":{"show":false,"scale":0.8,"hOffset":50,"vOffset":-80},"react":{"opacityDefault":0.5,"opacityOnHover":0.2},"log":false});</script></body></html>
